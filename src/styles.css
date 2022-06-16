@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+/*@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';*/
 
 :root {
     --background-color: #E6E6E6;
@@ -17,5 +17,4 @@ html, body {
 body { 
     margin: 0.5%; 
     font-family: Roboto, "Helvetica Neue", sans-serif;
-    background-color: var(--background-color); 
 }

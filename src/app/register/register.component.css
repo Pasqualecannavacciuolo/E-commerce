@@ -1,0 +1,11 @@
+.register-form {
+    width: 95%;
+    margin: auto auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.mat-form-field {
+    border-color:  green !important;
+}
