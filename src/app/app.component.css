@@ -1,0 +1,15 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: var(--text-light-color);
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  
