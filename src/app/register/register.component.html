@@ -1,8 +1,6 @@
-<form [formGroup]="registerForm" class="register-form">
+<form (ngSubmit)="onSubmit()" [formGroup]="registerForm" class="register-form">
   
   <!-- Value: {{ registerForm.value | json }} -->
-
-  <hr>
 
   <h1 class="mat-headline">Registrati</h1>
 
@@ -36,3 +34,4 @@
   </div>
 
 </form>
+
