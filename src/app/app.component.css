@@ -1,15 +1,19 @@
-.navbar {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
+.mat-toolbar {
+  background-color: var(--secondary-color);
+  color: var(--text-light-color);
 }
 
-.btn {
-    background-color: var(--primary-color);
-    color: var(--text-light-color);
+.logo img {
+  height: 2.5em;
+  margin-top: 10px;
 }
 
 .example-spacer {
-    flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+@media only screen and (min-width: 800px) {
+  .logo {
+    position: absolute;
   }
-  
+}
