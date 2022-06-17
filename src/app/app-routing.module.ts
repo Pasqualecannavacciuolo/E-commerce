@@ -5,14 +5,26 @@ import { CoursesComponent } from './courses/courses.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 
+import { LoggedUsersGuard } from './logged-users.guard';
+
 const routes: Routes = [
-  { path: 'courses', component: CoursesComponent },
-  { path: 'register', component: RegisterComponent },
-  { path: 'login', component: LoginComponent },
+  { 
+    path: 'courses', 
+    component: CoursesComponent,
+    canActivate: [LoggedUsersGuard] 
+  },
+  { 
+    path: 'register', 
+    component: RegisterComponent 
+  },
+  { 
+    path: 'login', 
+    component: LoginComponent 
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
