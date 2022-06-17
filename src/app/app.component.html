@@ -50,7 +50,7 @@
           <mat-icon>login</mat-icon>
           Login
         </a>
-        <a *ngIf="logged" (click)="sidenav.toggle()" mat-list-item>
+        <a *ngIf="logged" (click)="sidenav.toggle()" (click)="logout()" mat-list-item>
           <mat-icon>logout</mat-icon>
           Logout
         </a>
