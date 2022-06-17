@@ -54,7 +54,8 @@ export class RegisterComponent implements OnInit {
     });
 
     setTimeout(() => {
-      console.log(user);
+      window.sessionStorage.setItem('username', user.username);
+      window.sessionStorage.setItem('email', user.email);
       this.router.navigate(['/login']);
     }, 2000)
 

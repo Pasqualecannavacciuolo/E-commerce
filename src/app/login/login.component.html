@@ -1,1 +1,36 @@
-<p>login works!</p>
+<form (ngSubmit)="onSubmit()" [formGroup]="loginForm" class="register-form">
+  
+    <!-- Value: {{ registerForm.value | json }} -->
+  
+    <h1 class="mat-headline">Login</h1>
+  
+    <!-- USERNAME FIELD -->
+    <mat-form-field appearance="outline" class="mat-form-field">
+      
+      <mat-label>Username</mat-label>
+      <input matInput formControlName="username" type="text">
+      <mat-error *ngIf="username?.errors?.['required']">
+        L'username non può essere vuoto
+      </mat-error>
+  
+    </mat-form-field>
+  
+    <!-- EMAIL FIELD -->
+    <mat-form-field appearance="outline">
+  
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" type="text">
+      <mat-error *ngIf="email?.errors?.['required']">
+        L'email non può essere vuota
+      </mat-error>
+      <mat-error *ngIf="email?.errors?.['email']">
+        L'email non è nel giusto formato
+      </mat-error>
+    
+    </mat-form-field>
+  
+    <div class="button-wrapper">
+      <button [disabled]="loginForm.invalid" mat-raised-button color="primary">Login</button>
+    </div>
+  
+  </form>
