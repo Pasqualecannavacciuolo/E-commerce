@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup,  FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+
 // Questa libreria permette di creare ALERT personalizzati
 import Swal from 'sweetalert2';
 
@@ -46,7 +47,7 @@ export class RegisterComponent implements OnInit {
 
     // Alert personalizzato che avvisa dell'avvenuta registrazione
     Swal.fire({
-      position: 'top-end',
+      position: 'center',
       icon: 'success',
       title: 'Ti sei registrato con successo',
       showConfirmButton: false,

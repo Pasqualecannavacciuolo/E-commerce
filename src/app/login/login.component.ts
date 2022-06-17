@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+
 // Questa libreria permette di creare ALERT personalizzati
 import Swal from 'sweetalert2';
 
@@ -47,7 +48,7 @@ export class LoginComponent implements OnInit {
       window.sessionStorage.setItem('logged', 'true');
       // Alert personalizzato che avvisa dell'avvenuta registrazione
       Swal.fire({
-        position: 'top-end',
+        position: 'center',
         icon: 'success',
         title: 'Login effettuato con successo',
         showConfirmButton: false,
@@ -61,7 +62,7 @@ export class LoginComponent implements OnInit {
       }, 2000);
     } else {
       Swal.fire({
-        position: 'top-end',
+        position: 'center',
         icon: 'error',
         title: 'Qualcosa è andato storto nella fase di Login',
         showConfirmButton: false,

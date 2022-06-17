@@ -11,13 +11,18 @@ import { MaterialModule } from './material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { HeroComponent } from './hero/hero.component';
+import { HomeComponent } from './home/home.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     CoursesComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    HeroComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +30,7 @@ import { LoginComponent } from './login/login.component';
     BrowserAnimationsModule,
     MaterialModule,
     FlexLayoutModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
