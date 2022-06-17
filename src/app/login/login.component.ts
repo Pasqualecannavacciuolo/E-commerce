@@ -59,6 +59,14 @@ export class LoginComponent implements OnInit {
           window.location.reload();
         });
       }, 2000);
+    } else {
+      Swal.fire({
+        position: 'top-end',
+        icon: 'error',
+        title: 'Qualcosa è andato storto nella fase di Login',
+        showConfirmButton: false,
+        timer: 1500,
+      });
     }
   }
 }
