@@ -8,6 +8,9 @@ import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
 
 import { NgModule } from '@angular/core';
 
@@ -23,6 +26,9 @@ import { NgModule } from '@angular/core';
     MatSidenavModule,
     MatFormFieldModule,
     MatInputModule,
+    MatStepperModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
   exports: [
     CommonModule,
@@ -35,6 +41,9 @@ import { NgModule } from '@angular/core';
     MatSidenavModule,
     MatFormFieldModule,
     MatInputModule,
+    MatStepperModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
 })
 export class MaterialModule {}

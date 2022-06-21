@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup,  FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import {BreakpointObserver} from '@angular/cdk/layout';
+import {StepperOrientation} from '@angular/material/stepper';
+import {Observable} from 'rxjs';
+import {map} from 'rxjs/operators';
 
 // Questa libreria permette di creare ALERT personalizzati
 import Swal from 'sweetalert2';
@@ -13,10 +17,26 @@ import Swal from 'sweetalert2';
 export class RegisterComponent implements OnInit {
   
   registerForm!: FormGroup;
+  datiAnagraficiForm!: FormGroup;
+
+  isLinear = false;
+  stepperOrientation: Observable<StepperOrientation>;
   
-  constructor(private fb: FormBuilder, private router: Router) {}
+  constructor(private fb: FormBuilder, breakpointObserver: BreakpointObserver, private router: Router) {
+    this.stepperOrientation = breakpointObserver
+      .observe('(min-width: 800px)')
+      .pipe(map(({matches}) => (matches ? 'horizontal' : 'vertical')));
+  }
 
   ngOnInit(): void {
+
+    this.datiAnagraficiForm = this.fb.group({
+      nome: ['', Validators.required],
+      cognome: ['', Validators.required],
+      data_nascita: ['', Validators.required]
+    });
+
+
     this.registerForm = this.fb.group({
       username: ['', [
         Validators.required
@@ -25,9 +45,21 @@ export class RegisterComponent implements OnInit {
         Validators.required,
         Validators.email
       ]]
-    })
+    });
 
     //this.registerForm.valueChanges.subscribe(console.log)
+  }
+
+  get nome() {
+    return this.datiAnagraficiForm.get('nome');
+  }
+  
+  get cognome() {
+    return this.datiAnagraficiForm.get('cognome');
+  }
+
+  get data_nascita() {
+    return this.datiAnagraficiForm.get('data_nascita');
   }
 
   get username() {

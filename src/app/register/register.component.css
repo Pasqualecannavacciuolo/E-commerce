@@ -44,6 +44,18 @@
   margin-left: 11px;
 }
 
+.mat-stepper-horizontal {
+  margin-top: 8px;
+}
+
+.mat-form-field {
+  margin-top: 16px;
+}
+
+.avanti-button {
+  margin-top: 16px;
+}
+
 @media screen and (max-width: 600px) {
   .register-page {
     height: 100vh;
