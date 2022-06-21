@@ -1,36 +1,93 @@
-<form (ngSubmit)="onSubmit()" [formGroup]="registerForm" class="register-form">
-  
-  <!-- Value: {{ registerForm.value | json }} -->
+<!-- <div class="register-page">
+  <form
+    (ngSubmit)="onSubmit()"
+    [formGroup]="registerForm"
+    class="register-form"
+  > -->
 
-  <h1 class="mat-headline">Registrati</h1>
+<!-- <h1 class="mat-headline">Registrati</h1> -->
 
-  <!-- USERNAME FIELD -->
-  <mat-form-field appearance="outline" class="mat-form-field">
-    
-    <mat-label>Username</mat-label>
-    <input matInput formControlName="username" type="text">
-    <mat-error *ngIf="username?.errors?.['required']">
-      L'username non può essere vuoto
-    </mat-error>
+<!-- USERNAME FIELD -->
 
-  </mat-form-field>
+<!-- <mat-form-field appearance="outline" class="mat-form-field">
+      <mat-label>Username</mat-label>
+      <input matInput formControlName="username" type="text" />
+      <mat-error *ngIf="username?.errors?.['required']">
+        L'username non può essere vuoto
+      </mat-error>
+    </mat-form-field> -->
 
-  <!-- EMAIL FIELD -->
-  <mat-form-field appearance="outline">
+<!-- EMAIL FIELD -->
 
-    <mat-label>Email</mat-label>
-    <input matInput formControlName="email" type="text">
-    <mat-error *ngIf="email?.errors?.['required']">
-      L'email non può essere vuota
-    </mat-error>
-    <mat-error *ngIf="email?.errors?.['email']">
-      L'email non è nel giusto formato
-    </mat-error>
-  
-  </mat-form-field>
+<!-- <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" type="text" />
+      <mat-error *ngIf="email?.errors?.['required']">
+        L'email non può essere vuota
+      </mat-error>
+      <mat-error *ngIf="email?.errors?.['email']">
+        L'email non è nel giusto formato
+      </mat-error>
+    </mat-form-field> 
 
-  <div class="button-wrapper">
-    <button [disabled]="registerForm.invalid" mat-raised-button color="primary">Registrati</button>
+    <div class="button-wrapper">
+      <button
+        [disabled]="registerForm.invalid"
+        mat-raised-button
+        color="primary"
+      >
+        Registrati
+      </button>
+    </div>
+  </form>
+</div> -->
+
+<div class="register-page">
+  <div class="container">
+    <div class="container-child" id="image">
+      <img src="../../assets/register.svg" alt="register form illustration" />
+    </div>
+    <div class="container-child" id="form">
+      <form
+        (ngSubmit)="onSubmit()"
+        [formGroup]="registerForm"
+        class="register-form"
+      >
+        <h1 class="mat-headline">Registrati</h1>
+
+        <!-- USERNAME FIELD -->
+
+        <mat-form-field appearance="outline" class="mat-form-field">
+          <mat-label>Username</mat-label>
+          <input matInput formControlName="username" type="text" />
+          <mat-error *ngIf="username?.errors?.['required']">
+            L'username non può essere vuoto
+          </mat-error>
+        </mat-form-field>
+
+        <!-- EMAIL FIELD -->
+
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" type="text" />
+          <mat-error *ngIf="email?.errors?.['required']">
+            L'email non può essere vuota
+          </mat-error>
+          <mat-error *ngIf="email?.errors?.['email']">
+            L'email non è nel giusto formato
+          </mat-error>
+        </mat-form-field>
+
+        <div class="button-wrapper">
+          <button
+            [disabled]="registerForm.invalid"
+            mat-raised-button
+            color="primary"
+          >
+            Registrati
+          </button>
+        </div>
+      </form>
+    </div>
   </div>
-
-</form>
+</div>

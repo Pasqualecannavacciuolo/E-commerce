@@ -56,7 +56,7 @@ export class LoginComponent implements OnInit {
       });
 
       setTimeout(() => {
-        this.router.navigate(['/']).then(() => {
+        this.router.navigate(['/home']).then(() => {
           window.location.reload();
         });
       }, 2000);
