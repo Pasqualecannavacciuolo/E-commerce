@@ -7,15 +7,15 @@
       </mat-card-header>
       <mat-card-content>
         <mat-label>Nome</mat-label>
-        <h1>Pasquale</h1>
+        <h1>{{ nome }}</h1>
         <mat-label>Cognome</mat-label>
-        <h1>Cannavacciuolo</h1>
+        <h1>{{ cognome }}</h1>
         <mat-label>Data di nascita</mat-label>
-        <h1>09/24/1997</h1>
+        <h1>{{ data_nascita | date:'shortDate' }}</h1>
         <mat-label>Username</mat-label>
-        <h1>Pandorenki</h1>
+        <h1>{{ username}}</h1>
         <mat-label>Email</mat-label>
-        <h1>p.cannavacciuolo@icloud.com</h1>
+        <h1>{{ email }}</h1>
       </mat-card-content>
     </mat-card>
   </div>
