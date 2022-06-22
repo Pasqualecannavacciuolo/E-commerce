@@ -7,8 +7,13 @@
   flex: 1 1 auto;
 }
 
-@media only screen and (min-width: 800px) {
-  .logo {
-    position: absolute;
+.profile-image {
+  background-image: url('../assets/profile-image.jpg');
+  background-size: cover;
+}
+
+@media screen and (max-width: 600px) {  
+  .mat-card-header .mat-card-title {
+    margin-top: 9%;
   }
 }
