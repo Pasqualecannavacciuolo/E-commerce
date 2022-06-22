@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,8 @@ export class AppComponent implements OnInit{
   
   logged = false;
   username?: string;
+
+  constructor(private router: Router) {}
   
   ngOnInit(): void {
     let sessionLogged = window.sessionStorage.getItem('logged');
@@ -20,7 +23,7 @@ export class AppComponent implements OnInit{
   title = 'E-commerce';
 
   logout() {
-    let sessionStorageArray = ['username', 'email', 'logged'];
+    let sessionStorageArray = ['nome', 'cognome', 'data_nascita', 'username', 'email', 'logged'];
     
     if(this.username) {
       sessionStorageArray.forEach(element => {
@@ -29,6 +32,7 @@ export class AppComponent implements OnInit{
     }
 
     setTimeout(() => {
+      this.router.navigate(['/home'])
       window.location.reload();
     }, 1000);
   }
