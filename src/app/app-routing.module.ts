@@ -7,6 +7,7 @@ import { RegisterComponent } from './register/register.component';
 
 import { LoggedUsersGuard } from './logged-users.guard';
 import { HomeComponent } from './home/home.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   { 
@@ -30,6 +31,10 @@ const routes: Routes = [
   { 
     path: 'login', 
     component: LoginComponent 
+  },
+  { 
+    path: 'profile', 
+    component: ProfileComponent 
   },
 ];
 
