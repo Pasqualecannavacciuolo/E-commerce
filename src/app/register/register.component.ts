@@ -73,6 +73,9 @@ export class RegisterComponent implements OnInit {
   onSubmit() {
 
     let user = {
+      nome: this.nome?.value,
+      cognome: this.cognome?.value,
+      data_nascita: this.data_nascita?.value,
       username : this.username?.value,
       email: this.email?.value
     };
@@ -87,6 +90,9 @@ export class RegisterComponent implements OnInit {
     });
 
     setTimeout(() => {
+      window.sessionStorage.setItem('nome', user.nome);
+      window.sessionStorage.setItem('cognome', user.cognome);
+      window.sessionStorage.setItem('data_nascita', user.data_nascita);
       window.sessionStorage.setItem('username', user.username);
       window.sessionStorage.setItem('email', user.email);
       this.router.navigate(['/login']);
