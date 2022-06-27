@@ -17,7 +17,7 @@
         <!-- Profile page after login -->
         <a *ngIf="logged" mat-button [matMenuTriggerFor]="menu">
           <mat-icon>more_vert</mat-icon>
-          Ciao {{ username }}
+          Ciao {{ user?.username }}
         </a>
         <mat-menu #menu="matMenu">
           <button routerLink="/profile" mat-menu-item>
@@ -60,7 +60,7 @@
             <mat-card-header>
               <div mat-card-avatar class="profile-image"></div>
               <mat-card-title class="profile-name">
-                {{ username }}
+                {{ user?.username }}
               </mat-card-title>
             </mat-card-header>
           </a>

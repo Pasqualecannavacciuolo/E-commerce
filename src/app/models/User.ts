@@ -1,5 +1,5 @@
 export interface User {
-    id?: number,
+    id?: any,
     nome: string,
     cognome: string,
     data_nascita: string,

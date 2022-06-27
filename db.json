@@ -1,11 +1,28 @@
 {
-    "users": [
-      { "id": 1, 
-        "nome": "Pasquale", 
-        "cognome": "Cannavacciuolo",
-        "data_nascita": "09/24/1997",
-        "username": "Pandorenki",
-        "email": "p.cannavacciuolo@icloud.com"
-      }
-    ]
-  }
+  "users": [
+    {
+      "id": "8ef64c87-2ef8-4f22-8616-0fb9244fa80f",
+      "nome": "Pasquale",
+      "cognome": "Cannavacciuolo",
+      "data_nascita": "1997-09-23T22:00:00.000Z",
+      "username": "Pandorenki",
+      "email": "p.cannavacciuolo@icloud.com"
+    },
+    {
+      "id": "72704d51-9be7-4a01-94b2-48c68a88fd62",
+      "nome": "Maria Giovanna",
+      "cognome": "Guadagno",
+      "data_nascita": "2002-02-10T23:00:00.000Z",
+      "username": "MariJo02",
+      "email": "mj@gmail.com"
+    },
+    {
+      "id": "b06817ac-940f-4f71-829a-65dd9ad46fdc",
+      "nome": "Massimiliano",
+      "cognome": "Peruggi",
+      "data_nascita": "1997-07-29T22:00:00.000Z",
+      "username": "Massi",
+      "email": "massi97@gmail.com"
+    }
+  ]
+}

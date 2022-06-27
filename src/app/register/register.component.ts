@@ -8,6 +8,10 @@ import {map} from 'rxjs/operators';
 
 // Questa libreria permette di creare ALERT personalizzati
 import Swal from 'sweetalert2';
+import { UserService } from '../services/user.service';
+import { User } from '../models/User';
+
+import { v4 as uuidv4 } from 'uuid';
 
 @Component({
   selector: 'app-register',
@@ -15,6 +19,8 @@ import Swal from 'sweetalert2';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+
+  user?: User;
   
   registerForm!: FormGroup;
   datiAnagraficiForm!: FormGroup;
@@ -22,7 +28,7 @@ export class RegisterComponent implements OnInit {
   isLinear = false;
   stepperOrientation: Observable<StepperOrientation>;
   
-  constructor(private fb: FormBuilder, breakpointObserver: BreakpointObserver, private router: Router) {
+  constructor(private fb: FormBuilder, breakpointObserver: BreakpointObserver, private router: Router, private UserService: UserService) {
     this.stepperOrientation = breakpointObserver
       .observe('(min-width: 800px)')
       .pipe(map(({matches}) => (matches ? 'horizontal' : 'vertical')));
@@ -72,7 +78,8 @@ export class RegisterComponent implements OnInit {
 
   onSubmit() {
 
-    let user = {
+    this.user = {
+      id: uuidv4(),
       nome: this.nome?.value,
       cognome: this.cognome?.value,
       data_nascita: this.data_nascita?.value,
@@ -89,12 +96,11 @@ export class RegisterComponent implements OnInit {
       timer: 1500
     });
 
+    
+    this.UserService.saveUser(this.user!).subscribe(u => this.user = u);      
+
     setTimeout(() => {
-      window.sessionStorage.setItem('nome', user.nome);
-      window.sessionStorage.setItem('cognome', user.cognome);
-      window.sessionStorage.setItem('data_nascita', user.data_nascita);
-      window.sessionStorage.setItem('username', user.username);
-      window.sessionStorage.setItem('email', user.email);
+      window.sessionStorage.setItem('id',this.user!.id);
       this.router.navigate(['/login']);
     }, 2000)
 

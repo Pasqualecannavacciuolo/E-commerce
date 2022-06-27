@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 
 // Questa libreria permette di creare ALERT personalizzati
 import Swal from 'sweetalert2';
+import { User } from '../models/User';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -11,9 +13,15 @@ import Swal from 'sweetalert2';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
+  arrayOfUsers: User[] = [];
+  user?: User;
   loginForm!: FormGroup;
 
-  constructor(private fb: FormBuilder, private router: Router) {}
+  constructor(
+    private fb: FormBuilder,
+    private router: Router,
+    private UserService: UserService
+  ) {}
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
@@ -31,21 +39,32 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    let user = {
-      username: this.username?.value,
-      email: this.email?.value,
+    let user_form_data = {
+      username: this.username!.value,
+      email: this.email!.value,
     };
 
-    /**
-     * Ottengo le credenziali salvate
-     * In futuro saranno ottenute dal backend
-     */
-    let sessionUsername = window.sessionStorage.getItem('username');
-    let sessionEmail = window.sessionStorage.getItem('email');
+    //this.UserService.getUserByID(sessionid).subscribe(u => this.user = u);
+    this.UserService.getAllUsers().subscribe((data) =>
+      data.forEach((element) => {
+        this.arrayOfUsers.push(element);
+      })
+    );
+      
+      let flag = 0;
+      let array_size = this.arrayOfUsers.length;
+      let founded_user_id = 0;
 
-    // Se le credenziali inserite corrispondo a quelle salvate allora accedi
-    if (user.username === sessionUsername && user.email === sessionEmail) {
-      window.sessionStorage.setItem('logged', 'true');
+      for (let i = 0; i < array_size; i++) {
+        if ( this.arrayOfUsers[i].username == user_form_data.username && this.arrayOfUsers[i].email == user_form_data.email) {
+          flag = 1;
+          founded_user_id = this.arrayOfUsers[i].id;
+        }
+      }
+
+      if(flag==1) {
+        window.sessionStorage.setItem('logged', 'true');
+        window.sessionStorage.setItem('id', String(founded_user_id));
       // Alert personalizzato che avvisa dell'avvenuta registrazione
       Swal.fire({
         position: 'center',
@@ -60,14 +79,14 @@ export class LoginComponent implements OnInit {
           window.location.reload();
         });
       }, 2000);
-    } else {
-      Swal.fire({
-        position: 'center',
-        icon: 'error',
-        title: 'Qualcosa è andato storto nella fase di Login',
-        showConfirmButton: false,
-        timer: 1500,
-      });
-    }
+      } else {
+        Swal.fire({
+          position: 'center',
+          icon: 'error',
+          title: 'Qualcosa è andato storto nella fase di Login',
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      }
   }
 }

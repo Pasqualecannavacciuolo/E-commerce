@@ -1,40 +1,49 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { User } from './models/User';
+import { UserService } from './services/user.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements OnInit{
-  
+export class AppComponent implements OnInit {
   logged = false;
-  username?: string;
+  user?: User;
 
-  constructor(private router: Router) {}
-  
+  constructor(private router: Router, private UserService: UserService) {}
+
   ngOnInit(): void {
+    /**
+    * Ottengo l'id dal session storage
+    */
+    let sessionid = window.sessionStorage.getItem('id');
+
+    this.UserService.getUserByID(sessionid).subscribe((u) => (this.user = u));
+
     let sessionLogged = window.sessionStorage.getItem('logged');
-    if(sessionLogged == 'true') {
-      this.username = window.sessionStorage.getItem('username')!;
+
+    if (sessionLogged == 'true') {
       this.logged = true;
     }
   }
   title = 'E-commerce';
 
   logout() {
-    let sessionStorageArray = ['nome', 'cognome', 'data_nascita', 'username', 'email', 'logged'];
     
-    if(this.username) {
-      sessionStorageArray.forEach(element => {
+
+    let sessionStorageArray = ['id', 'logged'];
+
+    if (this.user?.username) {
+      sessionStorageArray.forEach((element) => {
         window.sessionStorage.removeItem(element);
       });
     }
 
     setTimeout(() => {
-      this.router.navigate(['/home'])
+      this.router.navigate(['/home']);
       window.location.reload();
     }, 1000);
   }
-
 }
