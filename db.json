@@ -1,0 +1,11 @@
+{
+    "users": [
+      { "id": 1, 
+        "nome": "Pasquale", 
+        "cognome": "Cannavacciuolo",
+        "data_nascita": "09/24/1997",
+        "username": "Pandorenki",
+        "email": "p.cannavacciuolo@icloud.com"
+      }
+    ]
+  }
