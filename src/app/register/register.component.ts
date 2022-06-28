@@ -84,7 +84,8 @@ export class RegisterComponent implements OnInit {
       cognome: this.cognome?.value,
       data_nascita: this.data_nascita?.value,
       username : this.username?.value,
-      email: this.email?.value
+      email: this.email?.value,
+      image: 'assets/fake_avatar.png'
     };
 
     // Alert personalizzato che avvisa dell'avvenuta registrazione

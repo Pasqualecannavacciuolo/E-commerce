@@ -5,4 +5,5 @@ export interface User {
     data_nascita: string,
     username: string,
     email: string,
+    image: string
 }

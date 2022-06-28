@@ -26,6 +26,15 @@
       "username": "Massi",
       "email": "massi97@gmail.com",
       "image": "assets/massi_portrait.jpg"
+    },
+    {
+      "id": "1b379e91-bbca-4846-a625-1c998e3d1594",
+      "nome": "Prova",
+      "cognome": "Prova",
+      "data_nascita": "2022-06-27T22:00:00.000Z",
+      "username": "prova",
+      "email": "prova@icloud.com",
+      "image": "assets/fake_avatar.png"
     }
   ]
 }
