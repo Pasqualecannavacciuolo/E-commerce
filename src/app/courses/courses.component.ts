@@ -12,14 +12,15 @@ export class CoursesComponent implements OnInit {
 
   courses: Course[] = []
   typesOfShoes: string[] = ['Boots', 'Clogs', 'Loafers', 'Moccasins', 'Sneakers'];
-  
+
   
   constructor(private CourseService: CourseService) { }
 
   ngOnInit(): void {
     // Ottengo tutti i corsi dall'API
     this.CourseService.getAllCourses().subscribe(data => (
-      this.courses = data
+      this.courses = data,
+      console.log(this.courses)
     ));
   }
 

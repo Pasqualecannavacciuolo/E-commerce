@@ -27,14 +27,20 @@
   gap: 15px;
 }
 
+
 .example-card {
   max-width: 350px;
 }
 
-.example-header-image {
-  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
-  background-size: cover;
+.mat-card-image {
+    height: 150px; 
+    object-fit: cover; 
 }
+
+/*.example-header-image {
+  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+  background-size: contain;
+}*/
 
 .mat-display-4 {
   text-align: center;
