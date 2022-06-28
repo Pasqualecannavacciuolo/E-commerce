@@ -19,23 +19,22 @@ export class ProfileComponent implements OnInit {
   constructor(private UserService: UserService) {}
 
   ngOnInit() {
+    
     /**
      * Ottengo l'id dal session storage
      */
     let sessionid = window.sessionStorage.getItem('id');
 
-    
     this.user = this.UserService.getUserByID(sessionid).subscribe((result) => {
       this.user = result;
-
+      console.log(this.user)
+      document.getElementById('avatar')!.style.backgroundImage = `url(${this.user!.image})`;
+      
       this.nome = this.user!.nome;
       this.cognome = this.user!.cognome;
       this.data_nascita = this.user!.data_nascita;
       this.username = this.user!.username;
       this.email = this.user!.email;
-    })
-    
-    
+    });
   }
-
 }
