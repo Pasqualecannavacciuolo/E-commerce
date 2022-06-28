@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { pipe } from 'rxjs';
 
 // Questa libreria permette di creare ALERT personalizzati
 import Swal from 'sweetalert2';
@@ -45,40 +46,32 @@ export class LoginComponent implements OnInit {
     };
 
     //this.UserService.getUserByID(sessionid).subscribe(u => this.user = u);
-    this.UserService.getAllUsers().subscribe((data) =>
-      data.forEach((element) => {
-        this.arrayOfUsers.push(element);
-      })
-    );
-      
-      let flag = 0;
-      let array_size = this.arrayOfUsers.length;
-      let founded_user_id = 0;
-
-      for (let i = 0; i < array_size; i++) {
-        if ( this.arrayOfUsers[i].username == user_form_data.username && this.arrayOfUsers[i].email == user_form_data.email) {
-          flag = 1;
-          founded_user_id = this.arrayOfUsers[i].id;
-        }
-      }
-
-      if(flag==1) {
+    let founded_user_id = 0;
+    this.UserService.getAllUsers().subscribe((result) => {
+      const user = result.find((element: any) => {
+        founded_user_id = element.id;
+        return (
+          element.username === user_form_data.username &&
+          element.email === user_form_data.email
+        );
+      });
+      if (user) {
         window.sessionStorage.setItem('logged', 'true');
         window.sessionStorage.setItem('id', String(founded_user_id));
-      // Alert personalizzato che avvisa dell'avvenuta registrazione
-      Swal.fire({
-        position: 'center',
-        icon: 'success',
-        title: 'Login effettuato con successo',
-        showConfirmButton: false,
-        timer: 1500,
-      });
-
-      setTimeout(() => {
-        this.router.navigate(['/home']).then(() => {
-          window.location.reload();
+        // Alert personalizzato che avvisa dell'avvenuta registrazione
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: 'Login effettuato con successo',
+          showConfirmButton: false,
+          timer: 1500,
         });
-      }, 2000);
+
+        setTimeout(() => {
+          this.router.navigate(['/home']).then(() => {
+            window.location.reload();
+          });
+        }, 2000);
       } else {
         Swal.fire({
           position: 'center',
@@ -88,5 +81,6 @@ export class LoginComponent implements OnInit {
           timer: 1500,
         });
       }
+    });
   }
 }
