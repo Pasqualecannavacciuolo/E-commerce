@@ -16,23 +16,23 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     /**
-    * Ottengo l'id dal session storage
-    */
-    let sessionid = window.sessionStorage.getItem('id');
+     * Ottengo l'id dal session storage
+     */
+    if (window.sessionStorage.getItem('id')) {
+      let sessionid = window.sessionStorage.getItem('id');
 
-    this.UserService.getUserByID(sessionid).subscribe((u) => (this.user = u));
+      this.UserService.getUserByID(sessionid).subscribe((u) => (this.user = u));
 
-    let sessionLogged = window.sessionStorage.getItem('logged');
+      let sessionLogged = window.sessionStorage.getItem('logged');
 
-    if (sessionLogged == 'true') {
-      this.logged = true;
+      if (sessionLogged == 'true') {
+        this.logged = true;
+      }
     }
   }
   title = 'E-commerce';
 
   logout() {
-    
-
     let sessionStorageArray = ['id', 'logged'];
 
     if (this.user?.username) {
