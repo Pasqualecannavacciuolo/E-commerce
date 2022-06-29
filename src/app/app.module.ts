@@ -15,6 +15,8 @@ import { LoginComponent } from './login/login.component';
 import { HeroComponent } from './hero/hero.component';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
+import { FormsModule } from '@angular/forms';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
 @NgModule({
@@ -35,6 +37,8 @@ import { ProfileComponent } from './profile/profile.component';
     MaterialModule,
     FlexLayoutModule,
     ReactiveFormsModule,
+    FormsModule,
+    Ng2SearchPipeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
