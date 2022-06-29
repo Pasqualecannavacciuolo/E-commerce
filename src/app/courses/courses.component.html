@@ -11,12 +11,9 @@
         </mat-form-field>
         <br />
       </form>
-      <mat-selection-list #shoes [multiple]="false">
-        <mat-list-option *ngFor="let user of Users | filter:data!">
-          <span>
-            <mat-icon>person</mat-icon>
-            <span>{{ user.name }}</span>
-          </span>
+      <mat-selection-list [multiple]="false">
+        <mat-list-option *ngFor="let tag of unique_tags">
+            <span (click)="setTag(tag)">{{ tag }}</span>
         </mat-list-option>
       </mat-selection-list>
 

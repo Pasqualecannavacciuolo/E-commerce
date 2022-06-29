@@ -53,49 +53,55 @@
       "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "prezzo": 150,
       "image": "https://www.vectorlogo.zone/logos/angular/angular-ar21.png",
-      "tags": ["angular, frontend, typescript"]
+      "tags": ["Angular", "Frontend", "Typescript"]
     },
     {
       "id": "89371289371289",
       "titolo": "Corso React Base",
       "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "prezzo": 150,
-      "image": "https://blog.wildix.com/wp-content/uploads/2020/06/react-logo.jpg"
+      "image": "https://blog.wildix.com/wp-content/uploads/2020/06/react-logo.jpg",
+      "tags": ["React", "Frontend", "Javascript"]
     },
     {
       "id": "89371289371289",
       "titolo": "Corso Svelte Base",
       "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "prezzo": 100,
-      "image": "https://italiancoders.it/wp-content/uploads/2021/01/svelte-logo.png"
+      "image": "https://italiancoders.it/wp-content/uploads/2021/01/svelte-logo.png",
+      "tags": ["Svelte", "Frontend", "Javascript"]
     },
     {
       "id": "89371289371289",
       "titolo": "Corso Next.JS Base",
       "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "prezzo": 250,
-      "image": "https://i2.wp.com/softwareengineeringdaily.com/wp-content/uploads/2020/02/NextJs.png?resize=730%2C389&ssl=1"
+      "image": "https://i2.wp.com/softwareengineeringdaily.com/wp-content/uploads/2020/02/NextJs.png?resize=730%2C389&ssl=1",
+      "tags": ["NextJs", "Backend", "Javascript"]
     },
     {
       "id": "89371289371289",
       "titolo": "Corso Nest.JS Base",
       "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "prezzo": 350,
-      "image": "https://www.vectorlogo.zone/logos/nestjs/nestjs-ar21.png"
+      "image": "https://www.vectorlogo.zone/logos/nestjs/nestjs-ar21.png",
+      "tags": ["NestJs", "Backend", "Javascript"]
     },
     {
       "id": "89371289371289",
       "titolo": "Corso Supabase Base",
       "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "prezzo": 90,
-      "image": "https://getlogo.net/wp-content/uploads/2020/11/supabase-logo-vector.png"
+      "image": "https://getlogo.net/wp-content/uploads/2020/11/supabase-logo-vector.png",
+      "tags": ["Supabase", "Backend", "Database"]
     },
     {
       "id": "89371289371289",
       "titolo": "Corso Angular Intermedio",
       "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "prezzo": 535,
-      "image": "https://www.vectorlogo.zone/logos/angular/angular-ar21.png"
+      "image": "https://www.vectorlogo.zone/logos/angular/angular-ar21.png",
+      "tags": ["Angular", "Frontend", "Typescript"]
     }
   ]
 }

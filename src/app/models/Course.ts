@@ -3,5 +3,6 @@ export interface Course {
     titolo: string,
     body: string,
     prezzo: number,
-    image: string
+    image: string,
+    tags: string[]
 }
