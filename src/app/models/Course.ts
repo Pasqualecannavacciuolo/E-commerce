@@ -4,5 +4,5 @@ export interface Course {
     body: string,
     prezzo: number,
     image: string,
-    tags: string[]
+    tags: string
 }

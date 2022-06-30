@@ -13,9 +13,9 @@
       </form>
       <mat-selection-list [multiple]="false">
         <button mat-flat-button color="primary" (click)="resetFilters()" class="reset-button">Reset filtri</button>
-        <mat-list-option *ngFor="let tag of unique_tags">
-            <span (click)="setTag(tag)">{{ tag }}</span>
-        </mat-list-option>
+        <div class="tags" *ngFor="let tag of unique_tags">
+            <button mat-button (click)="setTag(tag)">{{ tag }}</button>
+        </div>
       </mat-selection-list>
 
       <!-- <p>
