@@ -10,9 +10,14 @@ import { CourseService } from '../services/course.service';
 export class CoursesComponent implements OnInit {
   courses: Course[] = [];
   api_tags: string[] = [];
+  frontend_tags: string[] = [];
+  backend_tags: string[] = [];
+  database_tags: string[] = [];
   unique_tags: any;
 
   data: string = '';
+  tag_filtering: string = '';
+
 
   constructor(private CourseService: CourseService) {}
 
@@ -31,12 +36,29 @@ export class CoursesComponent implements OnInit {
         }),
 
         // Rimuovo i duplicati
-        (this.unique_tags = [...new Set(this.api_tags)])
+        this.unique_tags = [...new Set(this.api_tags)],
+
+        this.unique_tags.forEach((element: string) => {
+          if(element === 'Frontend') {
+            this.frontend_tags.push(element);
+          } else if (element === 'Backend') {
+            this.backend_tags.push(element);
+          } else {
+            this.database_tags.push(element);
+          }
+        })
       )
     );
   }
 
   setTag(tag: any) {
-    this.data = tag;
+    this.data = '';
+    this.tag_filtering = tag;
+    this.data = '';
+  }
+
+  resetFilters() {
+    this.tag_filtering = '';
+    this.data = '';
   }
 }

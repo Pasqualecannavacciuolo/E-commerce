@@ -12,6 +12,7 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatTreeModule} from '@angular/material/tree';
 
 import { NgModule } from '@angular/core';
 
@@ -31,6 +32,7 @@ import { NgModule } from '@angular/core';
     MatDatepickerModule,
     MatNativeDateModule,
     MatMenuModule,
+    MatTreeModule,
   ],
   exports: [
     CommonModule,
@@ -47,6 +49,7 @@ import { NgModule } from '@angular/core';
     MatDatepickerModule,
     MatNativeDateModule,
     MatMenuModule,
+    MatTreeModule,
   ],
 })
 export class MaterialModule {}
