@@ -4,5 +4,6 @@ export interface Course {
     body: string,
     prezzo: number,
     image: string,
+    macro_category: string,
     tags: string
 }

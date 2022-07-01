@@ -1,6 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { Course } from '../models/Course';
 import { CourseService } from '../services/course.service';
+import { FlatTreeControl } from '@angular/cdk/tree';
+import {
+  MatTreeFlatDataSource,
+  MatTreeFlattener,
+} from '@angular/material/tree';
+
+/**
+ * Food data with nested structure.
+ * Each node has a name and an optional list of children.
+ */
+interface FoodNode {
+  name: string;
+  children?: any[];
+}
+
+let TREE_DATA: FoodNode[] = [];
+
+/** Flat node with expandable and level information */
+interface ExampleFlatNode {
+  expandable: boolean;
+  name: string;
+  level: number;
+}
 
 @Component({
   selector: 'app-courses',
@@ -8,12 +31,42 @@ import { CourseService } from '../services/course.service';
   styleUrls: ['./courses.component.css'],
 })
 export class CoursesComponent implements OnInit {
+  // Salvo tutti i corsi
   courses: Course[] = [];
+  // Salvo tutte le macro categorie
+  macro_categories = new Set();
+
+  // Salvo tutti i tag
   api_tags: string[] = [];
+  // Contiene tutti i tag ottenuti in modo univoco
   unique_tags: any;
 
+  // Salvo la query di ricerca della barra di ricerca
   data: string = '';
+  // Salvo il tag cliccato nel menu di filtraggio dei contenuti
   tag_filtering: string = '';
+
+  private _transformer = (node: FoodNode, level: number) => {
+    return {
+      expandable: !!node.children && node.children.length > 0,
+      name: node.name,
+      level: level,
+    };
+  };
+
+  treeControl = new FlatTreeControl<ExampleFlatNode>(
+    (node) => node.level,
+    (node) => node.expandable
+  );
+
+  treeFlattener = new MatTreeFlattener(
+    this._transformer,
+    (node) => node.level,
+    (node) => node.expandable,
+    (node) => node.children
+  );
+
+  dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
 
   constructor(private CourseService: CourseService) {}
 
@@ -24,17 +77,47 @@ export class CoursesComponent implements OnInit {
         (this.courses = res),
         // Ottengo i tag di tutti i corsi dal'API
         this.courses.forEach((course) => {
+          this.macro_categories.add(course.macro_category);
           for (let i = 0; i < course.tags.length; i++) {
             this.api_tags.push(course.tags[i]);
           }
         }),
         // Rimuovo i duplicati
         (this.unique_tags = [...new Set(this.api_tags)]),
-        console.log(this.unique_tags)
+        // Filtro i contenuti e li suddivido nelle macro categorie
+        this.macro_categories.forEach((macro_category) => {
+          let tmp_obj = {
+            name: '',
+            children: [],
+          }
+          this.courses.forEach((course) => {
+            if (macro_category === 'Frontend') {
+              tmp_obj.name = macro_category;
+              if (course.macro_category === macro_category) {
+                let obj_category_children = {
+                  name: course.titolo
+                }
+                tmp_obj.children?.push(<never>obj_category_children);
+              }
+            } else if (macro_category === 'Backend') {
+              tmp_obj.name = macro_category;
+              if (course.macro_category === macro_category) {
+                let obj_category_children = {
+                  name: course.titolo
+                }
+                tmp_obj.children?.push(<never>obj_category_children);
+              }
+            }
+          });
+          console.log(TREE_DATA)
+          TREE_DATA.push(tmp_obj)
+        })
       )
     );
+    setTimeout(() => {
+      this.dataSource.data = TREE_DATA;
+    }, 500);
   }
-
 
   setTag(tag: any) {
     this.tag_filtering = tag;
@@ -44,4 +127,6 @@ export class CoursesComponent implements OnInit {
     this.tag_filtering = '';
     this.data = '';
   }
+
+  hasChild = (_: number, node: ExampleFlatNode) => node.expandable;
 }
