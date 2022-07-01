@@ -17,6 +17,7 @@ import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FormsModule } from '@angular/forms';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { OrderByPipe } from './order-by.pipe';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     LoginComponent,
     HeroComponent,
     HomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    OrderByPipe
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     FormsModule,
     Ng2SearchPipeModule,
   ],
-  providers: [],
+  providers: [OrderByPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

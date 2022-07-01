@@ -6,6 +6,7 @@ import {
   MatTreeFlatDataSource,
   MatTreeFlattener,
 } from '@angular/material/tree';
+import { OrderByPipe } from '../order-by.pipe';
 
 /**
  * Food data with nested structure.
@@ -68,13 +69,15 @@ export class CoursesComponent implements OnInit {
 
   dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
 
-  constructor(private CourseService: CourseService) {}
+  constructor(private CourseService: CourseService, private order: OrderByPipe) {}
 
   ngOnInit(): void {
     // Ottengo tutti i corsi dall'API
     this.CourseService.getAllCourses().subscribe(
       (res) => (
         (this.courses = res),
+        // Ordino tutti i corsi in base al titolo con la pipe personalizzata
+        this.order.transform(this.courses, 'titolo'),
         // Ottengo i tag di tutti i corsi dal'API
         this.courses.forEach((course) => {
           this.macro_categories.add(course.macro_category);
@@ -98,6 +101,8 @@ export class CoursesComponent implements OnInit {
                   name: course.titolo
                 }
                 tmp_obj.children?.push(<never>obj_category_children);
+                // Ordino tutti i corsi frontend in ordine alfabetico con la pipe personalizzata
+                this.order.transform(tmp_obj.children, 'name')
               }
             } else if (macro_category === 'Backend') {
               tmp_obj.name = macro_category;
@@ -106,6 +111,8 @@ export class CoursesComponent implements OnInit {
                   name: course.titolo
                 }
                 tmp_obj.children?.push(<never>obj_category_children);
+                // Ordino tutti i corsi backend in ordine alfabetico con la pipe personalizzata
+                this.order.transform(tmp_obj.children, 'name')
               }
             }
           });
