@@ -1,0 +1,26 @@
+<div class="page">
+    <div class="centered">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <mat-card-title>{{ course?.titolo }}</mat-card-title>
+                <mat-card-subtitle >
+                    <p *ngFor="let tag of course?.tags">#{{ tag }}</p>
+                </mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="{{ course?.image }}" alt="Photo of a Shiba Inu" />
+            <mat-card-content>
+                <p>
+                    {{ course?.body }}
+                </p>
+            </mat-card-content>
+
+            <mat-grid-list cols="2" rowHeight="2:1">
+                <mat-grid-tile>1</mat-grid-tile>
+                <mat-grid-tile>2</mat-grid-tile>
+                <mat-grid-tile>3</mat-grid-tile>
+                <mat-grid-tile>4</mat-grid-tile>
+              </mat-grid-list>
+              
+        </mat-card>
+    </div>
+</div>

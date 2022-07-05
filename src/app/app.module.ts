@@ -18,6 +18,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { FormsModule } from '@angular/forms';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { OrderByPipe } from './order-by.pipe';
+import { CourseDetailComponent } from './course-detail/course-detail.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { OrderByPipe } from './order-by.pipe';
     HeroComponent,
     HomeComponent,
     ProfileComponent,
-    OrderByPipe
+    OrderByPipe,
+    CourseDetailComponent
   ],
   imports: [
     BrowserModule,

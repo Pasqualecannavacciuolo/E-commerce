@@ -8,6 +8,7 @@ import { RegisterComponent } from './register/register.component';
 import { LoggedUsersGuard } from './logged-users.guard';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
+import { CourseDetailComponent } from './course-detail/course-detail.component';
 
 const routes: Routes = [
   { 
@@ -22,6 +23,11 @@ const routes: Routes = [
   { 
     path: 'courses', 
     component: CoursesComponent,
+    canActivate: [LoggedUsersGuard] 
+  },
+  {
+    path: 'course/:id',
+    component: CourseDetailComponent,
     canActivate: [LoggedUsersGuard] 
   },
   { 

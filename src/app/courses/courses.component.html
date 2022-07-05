@@ -65,7 +65,7 @@
           </mat-card-content>
           <mat-card-actions>
             <button mat-button>${{ course.prezzo }}</button>
-            <button mat-flat-button color="primary">Accedi</button>
+            <button [routerLink]="['/course/', course.id]" mat-flat-button color="primary">Accedi</button>
           </mat-card-actions>
         </mat-card>
       </div>

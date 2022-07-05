@@ -13,6 +13,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatTreeModule} from '@angular/material/tree';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 import { NgModule } from '@angular/core';
 
@@ -33,6 +34,7 @@ import { NgModule } from '@angular/core';
     MatNativeDateModule,
     MatMenuModule,
     MatTreeModule,
+    MatGridListModule,
   ],
   exports: [
     CommonModule,
@@ -50,6 +52,7 @@ import { NgModule } from '@angular/core';
     MatNativeDateModule,
     MatMenuModule,
     MatTreeModule,
+    MatGridListModule,
   ],
 })
 export class MaterialModule {}
