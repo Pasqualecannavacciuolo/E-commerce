@@ -48,7 +48,7 @@
   ],
   "courses": [
     {
-      "id": "89371289371289",
+      "id": "1",
       "titolo": "Corso Angular Base",
       "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "prezzo": 150,
@@ -57,7 +57,7 @@
       "tags": ["Angular" , "Typescript"]
     },
     {
-      "id": "89371289371289",
+      "id": "2",
       "titolo": "Corso React Base",
       "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "prezzo": 150,
@@ -66,7 +66,7 @@
       "tags": ["React", "Javascript"]
     },
     {
-      "id": "89371289371289",
+      "id": "3",
       "titolo": "Corso Svelte Base",
       "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "prezzo": 100,
@@ -75,7 +75,7 @@
       "tags": ["Svelte", "Javascript"]
     },
     {
-      "id": "89371289371289",
+      "id": "4",
       "titolo": "Corso Next.JS Base",
       "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "prezzo": 250,
@@ -84,7 +84,7 @@
       "tags": ["NextJs", "Javascript"]
     },
     {
-      "id": "89371289371289",
+      "id": "5",
       "titolo": "Corso Nest.JS Base",
       "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "prezzo": 350,
@@ -93,7 +93,7 @@
       "tags": ["NestJs", "Javascript"]
     },
     {
-      "id": "89371289371289",
+      "id": "6",
       "titolo": "Corso Supabase Base",
       "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "prezzo": 90,
@@ -102,13 +102,40 @@
       "tags": ["Supabase", "Database"]
     },
     {
-      "id": "89371289371289",
+      "id": "7",
       "titolo": "Corso Angular Intermedio",
       "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "prezzo": 535,
       "image": "https://www.vectorlogo.zone/logos/angular/angular-ar21.png",
       "macro_category": "Frontend",
       "tags": ["Angular", "Typescript"]
+    },
+    {
+      "id": "8",
+      "titolo": "Corso di Digital Marketing Base",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "prezzo": 99,
+      "image": "https://squaremediaagency.it/wp-content/uploads/2020/05/digital-marketing.jpeg",
+      "macro_category": "Marketing",
+      "tags": ["Digital Marketing", "Digital", "Marketing", "Base", "corso base"]
+    },
+    {
+      "id": "9",
+      "titolo": "Corso di Digital Marketing Intermedio",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "prezzo": 245,
+      "image": "https://www.lettera35.it/wp-content/uploads/2019/10/marketing-digitale-1280x720.jpg",
+      "macro_category": "Marketing",
+      "tags": ["Digital Marketing", "Digital", "Marketing", "Intermedio", "corso intermedio"]
+    },
+    {
+      "id": "10",
+      "titolo": "Corso Fotografia Digitale",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "prezzo": 311,
+      "image": "https://media.istockphoto.com/vectors/photography-courses-classes-isometric-web-banner-vector-id1218142757?k=20&m=1218142757&s=170667a&w=0&h=Ybv8ds95rq-Hxcs_qP9hkPXAyW2oBw1fMohTBYTpSV8=",
+      "macro_category": "Fotografia",
+      "tags": ["Fotografia", "Digitale", "fotografia digitale"]
     }
   ]
 }

@@ -12,6 +12,7 @@
 
 .filters {
   width: 15%;
+  min-width: fit-content;
   background-color: #fefefe;
   display: flex;
   flex-direction: column;

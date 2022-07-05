@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Course } from '../models/Course';
 import { CourseService } from '../services/course.service';
 import { FlatTreeControl } from '@angular/cdk/tree';
@@ -7,6 +7,7 @@ import {
   MatTreeFlattener,
 } from '@angular/material/tree';
 import { OrderByPipe } from '../order-by.pipe';
+import { Subscription } from 'rxjs';
 
 /**
  * Food data with nested structure.
@@ -31,7 +32,10 @@ interface ExampleFlatNode {
   templateUrl: './courses.component.html',
   styleUrls: ['./courses.component.css'],
 })
-export class CoursesComponent implements OnInit {
+export class CoursesComponent implements OnInit, OnDestroy {
+
+  private subscription: Subscription | undefined;
+  
   // Salvo tutti i corsi
   courses: Course[] = [];
   // Salvo tutte le macro categorie
@@ -70,10 +74,12 @@ export class CoursesComponent implements OnInit {
   dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
 
   constructor(private CourseService: CourseService, private order: OrderByPipe) {}
+  
 
   ngOnInit(): void {
     // Ottengo tutti i corsi dall'API
-    this.CourseService.getAllCourses().subscribe(
+    if(this.courses.length == 0) {
+    this.subscription = this.CourseService.getAllCourses().subscribe(
       (res) => (
         (this.courses = res),
         // Ordino tutti i corsi in base al titolo con la pipe personalizzata
@@ -94,8 +100,7 @@ export class CoursesComponent implements OnInit {
             children: [],
           }
           this.courses.forEach((course) => {
-            if (macro_category === 'Frontend') {
-              tmp_obj.name = macro_category;
+              tmp_obj.name = <string>macro_category;
               if (course.macro_category === macro_category) {
                 let obj_category_children = {
                   name: course.titolo
@@ -104,26 +109,18 @@ export class CoursesComponent implements OnInit {
                 // Ordino tutti i corsi frontend in ordine alfabetico con la pipe personalizzata
                 this.order.transform(tmp_obj.children, 'name')
               }
-            } else if (macro_category === 'Backend') {
-              tmp_obj.name = macro_category;
-              if (course.macro_category === macro_category) {
-                let obj_category_children = {
-                  name: course.titolo
-                }
-                tmp_obj.children?.push(<never>obj_category_children);
-                // Ordino tutti i corsi backend in ordine alfabetico con la pipe personalizzata
-                this.order.transform(tmp_obj.children, 'name')
-              }
-            }
+            
           });
-          console.log(TREE_DATA)
-          TREE_DATA.push(tmp_obj)
+         
+            TREE_DATA.push(tmp_obj);
+            this.dataSource.data = TREE_DATA;
+            console.log(TREE_DATA);
+          
+          
         })
       )
     );
-    setTimeout(() => {
-      this.dataSource.data = TREE_DATA;
-    }, 500);
+    }
   }
 
   setTag(tag: any) {
@@ -136,4 +133,9 @@ export class CoursesComponent implements OnInit {
   }
 
   hasChild = (_: number, node: ExampleFlatNode) => node.expandable;
+
+  ngOnDestroy(): void {
+    this.subscription?.unsubscribe();
+    TREE_DATA = [];
+  }
 }
