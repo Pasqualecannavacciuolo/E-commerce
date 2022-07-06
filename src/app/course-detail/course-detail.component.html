@@ -3,7 +3,7 @@
         <mat-card class="example-card">
             <mat-card-header>
                 <mat-card-title>{{ course?.titolo }}</mat-card-title>
-                <mat-card-subtitle >
+                <mat-card-subtitle>
                     <p *ngFor="let tag of course?.tags">#{{ tag }}</p>
                 </mat-card-subtitle>
             </mat-card-header>
@@ -15,12 +15,25 @@
             </mat-card-content>
 
             <mat-grid-list cols="2" rowHeight="2:1">
-                <mat-grid-tile>1</mat-grid-tile>
-                <mat-grid-tile>2</mat-grid-tile>
-                <mat-grid-tile>3</mat-grid-tile>
+                <mat-grid-tile class="learning-text">
+                    <div class="mat-grid-tile-content">
+                        <h2>Cosa imparerai</h2>
+                        <mat-list role="list">
+                            <mat-list-item role="listitem">Basi di angular</mat-list-item>
+                            <mat-list-item role="listitem">Routing</mat-list-item>
+                            <mat-list-item role="listitem">Directives</mat-list-item>
+                            <mat-list-item role="listitem">Pipes</mat-list-item>
+                            <mat-list-item role="listitem">Components</mat-list-item>
+                            <mat-list-item role="listitem">Services</mat-list-item>
+                            <mat-list-item role="listitem">Forms</mat-list-item>
+                        </mat-list>
+                    </div>
+                </mat-grid-tile>
+                <mat-grid-tile class="learning-image"></mat-grid-tile>
+                <mat-grid-tile class="practice-image"></mat-grid-tile>
                 <mat-grid-tile>4</mat-grid-tile>
-              </mat-grid-list>
-              
+            </mat-grid-list>
+
         </mat-card>
     </div>
 </div>

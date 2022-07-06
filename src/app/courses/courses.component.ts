@@ -106,7 +106,7 @@ export class CoursesComponent implements OnInit, OnDestroy {
                   name: course.titolo
                 }
                 tmp_obj.children?.push(<never>obj_category_children);
-                // Ordino tutti i corsi frontend in ordine alfabetico con la pipe personalizzata
+                // Ordino tutti i corsi con la pipe personalizzata
                 this.order.transform(tmp_obj.children, 'name')
               }
             

@@ -23,6 +23,30 @@
   gap: 15px;
 }
 
+mat-grid-list {
+    margin-top: 9%;
+}
+
 mat-grid-tile {
-  background: lightblue;
+  background: var(--text-light-color);
+}
+
+.mat-grid-tile-content {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.learning-image {
+    background-image: url('../../assets/learning-image.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Flippare questa immagine */
+.practice-image {
+    background-image: url('../../assets/practice-image.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
