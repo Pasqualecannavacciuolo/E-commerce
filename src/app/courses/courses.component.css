@@ -74,3 +74,13 @@
 .node-childreen {
   margin-left: 3em;
 }
+
+.mat-display-3 {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+.price {
+  font-size: 1.5em;
+  font-weight: 700;
+}
