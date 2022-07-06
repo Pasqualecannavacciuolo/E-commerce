@@ -13,13 +13,18 @@ export class CartService {
 
   constructor(private http: HttpClient) { }
 
-  saveToCart(course: Course): Observable<any> {
+  saveToCart(cart: Cart): Observable<any> {
     const url = 'http://localhost:3000/cart/';
-    return this.http.post(url, course);
+    return this.http.post(url, cart);
   }
 
   getCart(id: any): Observable<any> {
     const url = `http://localhost:3000/cart/${id}`;
     return this.http.get(url);
+  }
+
+  addItem(id: any, cart: Cart): Observable<any> {
+    const url = `http://localhost:3000/cart/${id}`;
+    return this.http.put(url, cart);
   }
 }
