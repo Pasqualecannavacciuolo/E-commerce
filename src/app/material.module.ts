@@ -14,6 +14,7 @@ import {MatNativeDateModule} from '@angular/material/core';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatTreeModule} from '@angular/material/tree';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatChipsModule} from '@angular/material/chips';
 
 import { NgModule } from '@angular/core';
 
@@ -35,6 +36,7 @@ import { NgModule } from '@angular/core';
     MatMenuModule,
     MatTreeModule,
     MatGridListModule,
+    MatChipsModule,
   ],
   exports: [
     CommonModule,
@@ -53,6 +55,7 @@ import { NgModule } from '@angular/core';
     MatMenuModule,
     MatTreeModule,
     MatGridListModule,
+    MatChipsModule,
   ],
 })
 export class MaterialModule {}
