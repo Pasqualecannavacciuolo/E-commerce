@@ -37,9 +37,11 @@
             <mat-icon>person</mat-icon>
             <span>Profilo</span>
           </button>
-          <button mat-menu-item>
-            <mat-icon>settings</mat-icon>
-            <span>Impostazioni</span>
+          <button routerLink="/cart" mat-menu-item>
+            <mat-icon>
+              shopping_cart
+            </mat-icon>
+            <span>Carrello</span>
           </button>
           <button mat-menu-item (click)="logout()">
             <mat-icon>logout</mat-icon>

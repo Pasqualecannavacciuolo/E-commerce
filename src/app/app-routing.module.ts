@@ -9,6 +9,7 @@ import { LoggedUsersGuard } from './logged-users.guard';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { CourseDetailComponent } from './course-detail/course-detail.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   { 
@@ -41,6 +42,11 @@ const routes: Routes = [
   { 
     path: 'profile', 
     component: ProfileComponent,
+    canActivate: [LoggedUsersGuard] 
+  },
+  { 
+    path: 'cart', 
+    component: CartComponent,
     canActivate: [LoggedUsersGuard] 
   },
 ];
