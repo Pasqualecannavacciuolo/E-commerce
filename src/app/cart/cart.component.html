@@ -5,17 +5,17 @@
       <hr />
       <h3>Resoconto acquisti</h3>
       <mat-list role="list">
-        <mat-list-item role="listitem">
+        <mat-list-item role="listitem" *ngFor="let course of cart!.items">
             <div class="mat-list-item-content">
-                <div>Corso #1</div> 
-                <div class="price">$100</div> 
+                <div>{{ course.titolo }}</div> 
+                <div class="price">${{ course.prezzo }}</div> 
             </div>
         </mat-list-item>
         <hr />
         <mat-list-item role="listitem">
             <div class="mat-list-item-content">
                 <div><strong>Totale</strong></div> 
-                <div class="price"><strong>$100</strong></div> 
+                <div class="price"><strong>${{ cart!.items | sum: 'prezzo' }}</strong></div> 
             </div>
         </mat-list-item>
       </mat-list>

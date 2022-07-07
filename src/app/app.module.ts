@@ -20,6 +20,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { OrderByPipe } from './order-by.pipe';
 import { CourseDetailComponent } from './course-detail/course-detail.component';
 import { CartComponent } from './cart/cart.component';
+import { SumPipe } from './sum.pipe';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { CartComponent } from './cart/cart.component';
     ProfileComponent,
     OrderByPipe,
     CourseDetailComponent,
-    CartComponent
+    CartComponent,
+    SumPipe
   ],
   imports: [
     BrowserModule,

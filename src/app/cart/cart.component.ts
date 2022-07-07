@@ -14,7 +14,8 @@ export class CartComponent implements OnInit {
   constructor(private CartService: CartService) { }
 
   ngOnInit(): void {
-    
+    let sessionID = window.sessionStorage.getItem('id');
+    this.CartService.getCart(sessionID).subscribe(c => this.cart = c);
   }
 
 }

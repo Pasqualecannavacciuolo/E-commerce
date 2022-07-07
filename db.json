@@ -246,6 +246,30 @@
             "Svelte",
             "Javascript"
           ]
+        },
+        {
+          "id": "1",
+          "titolo": "Corso Angular Base",
+          "body": "I love pastry candy marshmallow jelly-o bonbon ice cream jelly beans I love. Cupcake biscuit biscuit carrot cake chocolate chocolate bar bonbon jujubes. Chocolate toffee sweet roll sesame snaps croissant. Macaroon caramels marzipan soufflé I love marshmallow. Dessert brownie jelly-o cake lemon drops. I love cookie pudding I love I love pastry candy canes marshmallow bear claw. Sweet jelly-o chocolate cookie gummi bears lemon drops I love cotton candy chocolate bar. I love dragée wafer cotton candy sugar plum cheesecake brownie pudding I love. Oat cake chupa chups I love wafer gingerbread sesame snaps fruitcake cake. Oat cake dragée pastry oat cake powder. Oat cake topping jujubes chocolate bar gingerbread I love candy canes tart. Donut I love croissant jelly-o carrot cake topping gummies. Marshmallow candy canes chocolate bar fruitcake muffin danish ice cream. Sugar plum I love wafer lemon drops cookie sugar plum jelly-o. Wafer candy canes cake jelly-o danish cookie soufflé. Cotton candy cheesecake tiramisu powder soufflé I love I love pastry toffee. Pudding sweet roll jelly beans cake lemon drops chocolate bar caramels brownie. Candy I love chocolate bar powder danish fruitcake pastry chocolate cake. Gingerbread jelly shortbread macaroon carrot cake I love. Shortbread I love ice cream dragée donut cotton candy chocolate. I love pastry cookie apple pie dessert pastry. Fruitcake cookie apple pie marzipan cotton candy lollipop marzipan. Marzipan jelly cookie wafer I love candy gummi bears. Lemon drops tootsie roll cake jelly tootsie roll chocolate bar caramels oat cake. Cupcake powder cheesecake liquorice biscuit toffee chocolate bar. Jelly-o cookie tart I love I love apple pie. Chocolate bar ice cream shortbread sugar plum sugar plum donut marzipan. Macaroon cheesecake brownie pie muffin. Toffee liquorice pastry cake donut candy canes halvah cake. Pie ice cream lemon drops chupa chups I love jelly beans ice cream cookie croissant. Jujubes marshmallow gingerbread ice cream dragée. Biscuit caramels liquorice marzipan pie tart cake lemon drops. Lemon drops I love sweet roll chocolate topping fruitcake. Chocolate bar donut wafer powder sugar plum caramels apple pie wafer marshmallow. Jelly-o jelly I love chocolate candy canes. I love fruitcake chocolate bar ice cream dessert dragée candy canes I love croissant. Chupa chups jujubes biscuit oat cake jelly-o sweet candy canes. Powder I love pie cotton candy liquorice. Pie jelly tart dessert gummi bears jelly-o lemon drops gummi bears. Topping bonbon liquorice cake pastry. Sesame snaps apple pie I love I love liquorice chocolate jelly-o. I love pudding sweet caramels carrot cake. I love I love pie marshmallow candy canes powder. Candy canes tart fruitcake ice cream sesame snaps. Biscuit wafer toffee pie soufflé dragée sweet roll. I love soufflé pastry chocolate jelly sweet tiramisu tart sesame snaps. Lemon drops pastry pastry powder sweet roll sweet donut I love. Candy canes pudding cookie bear claw pie I love danish. Tootsie roll apple pie lemon drops brownie lollipop I love carrot cake shortbread marshmallow. Jujubes pudding icing cake tiramisu. Pudding sweet apple pie cupcake tart. Cake fruitcake candy shortbread biscuit lollipop candy powder I love. Pastry jelly sesame snaps gummi bears I love I love tiramisu. Chocolate cake jujubes bear claw I love sweet I love. Soufflé danish marzipan lollipop danish oat cake chocolate bar shortbread candy canes. Muffin chocolate cake bonbon oat cake caramels. Brownie jelly-o fruitcake dessert caramels. Jelly cupcake fruitcake brownie candy topping candy croissant. Halvah liquorice oat cake danish I love shortbread macaroon I love chocolate cake. Fruitcake tart tootsie roll gummi bears jelly-o croissant. Chocolate lollipop tiramisu chupa chups jelly beans. Candy sweet oat cake tootsie roll brownie chupa chups lollipop. Liquorice wafer jelly-o pastry jelly-o. Donut croissant chocolate cake fruitcake. Sweet roll chocolate tart pastry sweet roll. Candy canes jelly-o sugar plum dessert bear claw carrot cake donut candy. Fruitcake pastry tootsie roll I love cupcake.",
+          "prezzo": 150,
+          "image": "https://www.vectorlogo.zone/logos/angular/angular-ar21.png",
+          "macro_category": "Frontend",
+          "tags": [
+            "Angular",
+            "Typescript"
+          ]
+        },
+        {
+          "id": "7",
+          "titolo": "Corso Angular Intermedio",
+          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "prezzo": 535,
+          "image": "https://www.vectorlogo.zone/logos/angular/angular-ar21.png",
+          "macro_category": "Frontend",
+          "tags": [
+            "Angular",
+            "Typescript"
+          ]
         }
       ]
     }
