@@ -41,7 +41,7 @@
             <mat-icon>
               shopping_cart
             </mat-icon>
-            <span>Carrello</span>
+            <span matBadge={{cartItems}} matBadgeOverlap="false">Carrello</span>
           </button>
           <button mat-menu-item (click)="logout()">
             <mat-icon>logout</mat-icon>

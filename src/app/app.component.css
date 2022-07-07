@@ -11,6 +11,11 @@
   background-size: cover;
 }
 
+.mat-menu-item {
+  width: fit-content !important;
+  padding: 0 30px;
+}
+
 @media screen and (max-width: 600px) {  
   .mat-card-header .mat-card-title {
     margin-top: 9%;

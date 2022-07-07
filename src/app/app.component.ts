@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Cart } from './models/Cart';
 import { User } from './models/User';
+import { CartService } from './services/cart.service';
 import { UserService } from './services/user.service';
 
 @Component({
@@ -11,8 +13,16 @@ import { UserService } from './services/user.service';
 export class AppComponent implements OnInit {
   logged = false;
   user?: User;
+  cart: Cart | undefined;
+  cartItems: number | undefined;
 
-  constructor(private router: Router, private UserService: UserService) {}
+  hidden = false;
+
+  toggleBadgeVisibility() {
+    this.hidden = !this.hidden;
+  }
+
+  constructor(private CartService: CartService ,private router: Router, private UserService: UserService) {}
 
   ngOnInit(): void {
     /**
@@ -27,7 +37,10 @@ export class AppComponent implements OnInit {
 
       if (sessionLogged == 'true') {
         this.logged = true;
+        let sessionID = window.sessionStorage.getItem('id');
+        this.CartService.getCart(sessionID).subscribe(c => this.cartItems = c.items.length);
       }
+      
     }
   }
   title = 'E-commerce';
