@@ -13,7 +13,7 @@
 
 .mat-menu-item {
   width: fit-content !important;
-  padding: 0 30px;
+  padding: 0 35px;
 }
 
 @media screen and (max-width: 600px) {  

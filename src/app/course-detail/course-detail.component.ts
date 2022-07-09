@@ -28,7 +28,7 @@ export class CourseDetailComponent implements OnInit {
 
   addToCart(course: Course) {
     this.CartService.getCart(window.sessionStorage.getItem('id')).subscribe((res) => {
-      if(res.hasOwnProperty('id')){
+      if(res.hasOwnProperty('id')) {
         this.cart = res;
         let courses_array = this.cart?.items;
         let cart_obj = {
@@ -39,6 +39,7 @@ export class CourseDetailComponent implements OnInit {
         cart_obj.items?.push(course);
         console.log("Dopo:  " + cart_obj.items);
         this.CartService.addItem(window.sessionStorage.getItem('id'), <Cart>cart_obj).subscribe();
+        window.location.reload();
       }
        
       }, (error) => { // Se non trovo alcun carrello con l'ID indicato
@@ -50,6 +51,7 @@ export class CourseDetailComponent implements OnInit {
         items: courses_array
       }
       this.CartService.saveToCart(<Cart>cart_obj).subscribe();
+      window.location.reload();
     });
   }
     /*let courses_array = [];
