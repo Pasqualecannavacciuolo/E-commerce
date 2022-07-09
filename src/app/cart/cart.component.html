@@ -7,7 +7,10 @@
       <mat-list role="list">
         <mat-list-item role="listitem" *ngFor="let course of cart!.items">
             <div class="mat-list-item-content">
-                <div>{{ course.titolo }}</div> 
+              <div class="cart-item">
+                <button mat-button (click)="deleteCourse(course.id)"><mat-icon>delete</mat-icon></button>
+                <span>{{ course.titolo }}</span>
+              </div> 
                 <div class="price">${{ course.prezzo }}</div> 
             </div>
         </mat-list-item>

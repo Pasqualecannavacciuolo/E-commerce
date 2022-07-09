@@ -27,4 +27,9 @@ export class CartService {
     const url = `http://localhost:3000/cart/${id}`;
     return this.http.put(url, cart);
   }
+
+  deleteFromCart(id: any, cart: Cart) {
+    const url = `http://localhost:3000/cart/${id}`;
+    return this.http.put(url, cart);
+  }
 }

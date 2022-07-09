@@ -32,3 +32,9 @@
 .price {
     margin-left: auto;
 }
+
+.cart-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
