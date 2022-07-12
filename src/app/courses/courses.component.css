@@ -1,3 +1,7 @@
+button {
+  border-radius: 0;
+}
+
 .page {
   background-image: url("../../assets/bg-pattern.png");
   background-size: auto;
@@ -17,7 +21,7 @@
   display: flex;
   flex-direction: column;
   margin: 0 3em;
-  border-radius: 5px;
+  /*border-radius: 5px;*/
 }
 
 .search-bar {
@@ -46,6 +50,7 @@
 
 .example-card {
   max-width: 350px;
+  border-radius: 0;
 }
 
 .mat-card-image {
