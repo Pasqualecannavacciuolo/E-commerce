@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable, of } from 'rxjs';
 import { Cart } from '../models/Cart';
 import { CartService } from '../services/cart.service';
 
@@ -9,12 +10,14 @@ import { CartService } from '../services/cart.service';
 })
 export class CartComponent implements OnInit {
   cart?: Cart;
+  sessionID = '';
 
   constructor(private CartService: CartService) {}
 
   ngOnInit(): void {
     let sessionID = window.sessionStorage.getItem('id');
     this.CartService.getCart(sessionID).subscribe((c) => (this.cart = c));
+
   }
 
   deleteCourse(idToDelete: any) {
@@ -33,7 +36,7 @@ export class CartComponent implements OnInit {
             window.sessionStorage.getItem('id'),
             <Cart>cart_obj
           ).subscribe();
-          window.location.reload();
+          this.cart?.items.pop();
         }
       }
     );
