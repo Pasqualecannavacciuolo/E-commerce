@@ -61,7 +61,10 @@ export class CartComponent implements OnInit {
             window.sessionStorage.getItem('id'),
             <Cart>cart_obj
           ).subscribe();
-          this.cart?.items.pop();
+          this.cart?.items.filter(function(value){ 
+            return value !== idToDelete;
+          });
+          //this.cart?.items.pop();
           this.getCartTotal();
         }
       }
@@ -79,7 +82,8 @@ export class CartComponent implements OnInit {
     }),
   })
     .then(res => {
-      if (res.ok) return res.json()
+      this.CartService.deleteCart(window.sessionStorage.getItem('id')).subscribe();
+      if (res.ok) return res.json();
       return res.json().then(json => Promise.reject(json))
     })
     .then(({ url }) => {

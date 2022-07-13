@@ -32,4 +32,9 @@ export class CartService {
     const url = `http://localhost:3000/cart/${id}`;
     return this.http.put(url, cart);
   }
+
+  deleteCart(id: any) {
+    const url = `http://localhost:3000/cart/${id}`;
+    return this.http.delete(url);
+  }
 }

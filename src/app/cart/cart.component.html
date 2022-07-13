@@ -20,7 +20,7 @@
                 <div><strong>Totale</strong></div> 
                 <div class="price"><strong>${{ cartTotal }}</strong></div> 
             </div>
-            <button mat-flat-button (click)="makePayment()">Checkout</button>
+            <button mat-flat-button (click)="makePayment()" *ngIf="cartTotal != 0">Checkout</button>
             
             
         </mat-list-item>
