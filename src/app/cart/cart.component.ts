@@ -82,8 +82,10 @@ export class CartComponent implements OnInit {
     }),
   })
     .then(res => {
-      this.CartService.deleteCart(window.sessionStorage.getItem('id')).subscribe();
-      if (res.ok) return res.json();
+      if (res.ok) {
+        this.CartService.deleteCart(window.sessionStorage.getItem('id')).subscribe();
+        return res.json();
+      }
       return res.json().then(json => Promise.reject(json))
     })
     .then(({ url }) => {
