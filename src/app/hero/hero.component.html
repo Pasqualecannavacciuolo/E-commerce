@@ -9,7 +9,7 @@
     </p>
 
     <div class="button-wrapper">
-      <button mat-raised-button routerLink="/login">Scopri i corsi</button>
+      <button mat-raised-button [routerLink]="logged === 'false' ? ['/login'] : ['/courses']" >Scopri i corsi</button>
     </div>
   </div>
   <div class="waves"></div>

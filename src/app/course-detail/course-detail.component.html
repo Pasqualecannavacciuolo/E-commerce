@@ -7,7 +7,7 @@
                     <p *ngFor="let tag of course?.tags">#{{ tag }}</p>
                 </mat-card-subtitle>
             </mat-card-header>
-            <img mat-card-image src="{{ course?.image }}" alt="Photo of a Shiba Inu" />
+            <img class="course-image" mat-card-image src="{{ course?.image }}" alt="Photo of a Shiba Inu" />
             <mat-card-content>
                 <p>
                     {{ course?.body }}
@@ -20,13 +20,7 @@
                         <h1>Cosa imparerai</h1>
                         <h4>Ecco una lista degli argomenti che vedrai in questo corso</h4>
                         <mat-list role="list">
-                            <mat-list-item role="listitem">Basi di angular</mat-list-item>
-                            <mat-list-item role="listitem">Routing</mat-list-item>
-                            <mat-list-item role="listitem">Directives</mat-list-item>
-                            <mat-list-item role="listitem">Pipes</mat-list-item>
-                            <mat-list-item role="listitem">Components</mat-list-item>
-                            <mat-list-item role="listitem">Services</mat-list-item>
-                            <mat-list-item role="listitem">Forms</mat-list-item>
+                            <mat-list-item role="listitem" *ngFor="let argomento of course?.cosa_imparerai">{{ argomento }}</mat-list-item>
                         </mat-list>
                     </div>
                 </mat-grid-tile>
@@ -37,11 +31,18 @@
                     <h1>Crediamo nella pratica</h1>
                     <h4>Un elenco dei progetti che realizzerai con l'aiuto di un tutor</h4>
                     <mat-list role="list">
-                        <mat-list-item role="listitem"> <div class="easy_difficulty"></div> ToDo App</mat-list-item>
-                        <mat-list-item role="listitem"> <div class="easy_difficulty"></div> App Meteo sia Web che Mobile</mat-list-item>
+                        <mat-list-item role="listitem" *ngFor="let progetto of progetti">
+                            <div [ngClass]="{
+                                'easy_difficulty': progetto.difficolta === 'easy',
+                                'intermediate_difficulty': progetto.difficolta === 'medium',
+                                'hard_difficulty': progetto.difficolta === 'difficult'
+                            }"></div>
+                            {{ progetto.nome }}
+                        </mat-list-item>
+                        <!--<mat-list-item role="listitem"> <div class="easy_difficulty"></div> App Meteo sia Web che Mobile</mat-list-item>
                         <mat-list-item role="listitem"> <div class="intermediate_difficulty"></div> Music Player App Desktop</mat-list-item>
                         <mat-list-item role="listitem"> <div class="intermediate_difficulty"></div> App Bug Tracker</mat-list-item>
-                        <mat-list-item role="listitem"> <div class="hard_difficulty"></div> Sito E-commerce completo</mat-list-item>
+                        <mat-list-item role="listitem"> <div class="hard_difficulty"></div> Sito E-commerce completo</mat-list-item>-->
                     </mat-list>
                 </div>
                 </mat-grid-tile>

@@ -5,5 +5,12 @@ export interface Course {
     prezzo: number,
     image: string,
     macro_category: string,
-    tags: string
+    tags: string,
+    cosa_imparerai: string,
+    progetti: [
+        {
+        nome: string,
+        difficolta: string
+        }
+    ]
 }

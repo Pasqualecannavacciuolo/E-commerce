@@ -57,6 +57,34 @@
       "tags": [
         "Angular",
         "Typescript"
+      ],
+      "cosa_imparerai": [
+        "Argomento #1",
+        "Argomento #2",
+        "Argomento #3",
+        "Argomento #4"
+      ],
+      "progetti": [
+        {
+          "nome": "Progetto #1",
+          "difficolta": "easy"
+        },
+        {
+          "nome": "Progetto #2",
+          "difficolta": "easy"
+        },
+        {
+          "nome": "Progetto #3",
+          "difficolta": "medium"
+        },
+        {
+          "nome": "Progetto #4",
+          "difficolta": "medium"
+        },
+        {
+          "nome": "Progetto #5",
+          "difficolta": "difficult"
+        }
       ]
     },
     {
@@ -69,6 +97,34 @@
       "tags": [
         "React",
         "Javascript"
+      ],
+      "cosa_imparerai": [
+        "Argomento #1",
+        "Argomento #2",
+        "Argomento #3",
+        "Argomento #4"
+      ],
+      "progetti": [
+        {
+          "nome": "Progetto #1",
+          "difficolta": "easy"
+        },
+        {
+          "nome": "Progetto #2",
+          "difficolta": "easy"
+        },
+        {
+          "nome": "Progetto #3",
+          "difficolta": "easy"
+        },
+        {
+          "nome": "Progetto #4",
+          "difficolta": "medium"
+        },
+        {
+          "nome": "Progetto #5",
+          "difficolta": "difficult"
+        }
       ]
     },
     {
@@ -81,6 +137,34 @@
       "tags": [
         "Svelte",
         "Javascript"
+      ],
+      "cosa_imparerai": [
+        "Argomento #1",
+        "Argomento #2",
+        "Argomento #3",
+        "Argomento #4"
+      ],
+      "progetti": [
+        {
+          "nome": "Progetto #1",
+          "difficolta": "easy"
+        },
+        {
+          "nome": "Progetto #2",
+          "difficolta": "easy"
+        },
+        {
+          "nome": "Progetto #3",
+          "difficolta": "easy"
+        },
+        {
+          "nome": "Progetto #4",
+          "difficolta": "medium"
+        },
+        {
+          "nome": "Progetto #5",
+          "difficolta": "difficult"
+        }
       ]
     },
     {
@@ -93,6 +177,34 @@
       "tags": [
         "NextJs",
         "Javascript"
+      ],
+      "cosa_imparerai": [
+        "Argomento #1",
+        "Argomento #2",
+        "Argomento #3",
+        "Argomento #4"
+      ],
+      "progetti": [
+        {
+          "nome": "Progetto #1",
+          "difficolta": "easy"
+        },
+        {
+          "nome": "Progetto #2",
+          "difficolta": "easy"
+        },
+        {
+          "nome": "Progetto #3",
+          "difficolta": "easy"
+        },
+        {
+          "nome": "Progetto #4",
+          "difficolta": "medium"
+        },
+        {
+          "nome": "Progetto #5",
+          "difficolta": "difficult"
+        }
       ]
     },
     {
@@ -105,6 +217,34 @@
       "tags": [
         "NestJs",
         "Javascript"
+      ],
+      "cosa_imparerai": [
+        "Argomento #1",
+        "Argomento #2",
+        "Argomento #3",
+        "Argomento #4"
+      ],
+      "progetti": [
+        {
+          "nome": "Progetto #1",
+          "difficolta": "easy"
+        },
+        {
+          "nome": "Progetto #2",
+          "difficolta": "easy"
+        },
+        {
+          "nome": "Progetto #3",
+          "difficolta": "easy"
+        },
+        {
+          "nome": "Progetto #4",
+          "difficolta": "medium"
+        },
+        {
+          "nome": "Progetto #5",
+          "difficolta": "difficult"
+        }
       ]
     },
     {
@@ -117,6 +257,34 @@
       "tags": [
         "Supabase",
         "Database"
+      ],
+      "cosa_imparerai": [
+        "Argomento #1",
+        "Argomento #2",
+        "Argomento #3",
+        "Argomento #4"
+      ],
+      "progetti": [
+        {
+          "nome": "Progetto #1",
+          "difficolta": "easy"
+        },
+        {
+          "nome": "Progetto #2",
+          "difficolta": "medium"
+        },
+        {
+          "nome": "Progetto #3",
+          "difficolta": "medium"
+        },
+        {
+          "nome": "Progetto #4",
+          "difficolta": "medium"
+        },
+        {
+          "nome": "Progetto #5",
+          "difficolta": "difficult"
+        }
       ]
     },
     {
@@ -129,6 +297,34 @@
       "tags": [
         "Angular",
         "Typescript"
+      ],
+      "cosa_imparerai": [
+        "Argomento #1",
+        "Argomento #2",
+        "Argomento #3",
+        "Argomento #4"
+      ],
+      "progetti": [
+        {
+          "nome": "Progetto #1",
+          "difficolta": "medium"
+        },
+        {
+          "nome": "Progetto #2",
+          "difficolta": "medium"
+        },
+        {
+          "nome": "Progetto #3",
+          "difficolta": "medium"
+        },
+        {
+          "nome": "Progetto #4",
+          "difficolta": "difficult"
+        },
+        {
+          "nome": "Progetto #5",
+          "difficolta": "difficult"
+        }
       ]
     },
     {
@@ -144,6 +340,34 @@
         "Marketing",
         "Base",
         "corso base"
+      ],
+      "cosa_imparerai": [
+        "Argomento #1",
+        "Argomento #2",
+        "Argomento #3",
+        "Argomento #4"
+      ],
+      "progetti": [
+        {
+          "nome": "Progetto #1",
+          "difficolta": "easy"
+        },
+        {
+          "nome": "Progetto #2",
+          "difficolta": "easy"
+        },
+        {
+          "nome": "Progetto #3",
+          "difficolta": "easy"
+        },
+        {
+          "nome": "Progetto #4",
+          "difficolta": "medium"
+        },
+        {
+          "nome": "Progetto #5",
+          "difficolta": "difficult"
+        }
       ]
     },
     {
@@ -159,6 +383,34 @@
         "Marketing",
         "Intermedio",
         "corso intermedio"
+      ],
+      "cosa_imparerai": [
+        "Argomento #1",
+        "Argomento #2",
+        "Argomento #3",
+        "Argomento #4"
+      ],
+      "progetti": [
+        {
+          "nome": "Progetto #1",
+          "difficolta": "medium"
+        },
+        {
+          "nome": "Progetto #2",
+          "difficolta": "medium"
+        },
+        {
+          "nome": "Progetto #3",
+          "difficolta": "difficult"
+        },
+        {
+          "nome": "Progetto #4",
+          "difficolta": "difficult"
+        },
+        {
+          "nome": "Progetto #5",
+          "difficolta": "difficult"
+        }
       ]
     },
     {
@@ -172,6 +424,34 @@
         "Fotografia",
         "Digitale",
         "fotografia digitale"
+      ],
+      "cosa_imparerai": [
+        "Argomento #1",
+        "Argomento #2",
+        "Argomento #3",
+        "Argomento #4"
+      ],
+      "progetti": [
+        {
+          "nome": "Progetto #1",
+          "difficolta": "easy"
+        },
+        {
+          "nome": "Progetto #2",
+          "difficolta": "easy"
+        },
+        {
+          "nome": "Progetto #3",
+          "difficolta": "easy"
+        },
+        {
+          "nome": "Progetto #4",
+          "difficolta": "easy"
+        },
+        {
+          "nome": "Progetto #5",
+          "difficolta": "medium"
+        }
       ]
     }
   ],

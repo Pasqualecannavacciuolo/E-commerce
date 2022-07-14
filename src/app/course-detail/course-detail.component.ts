@@ -14,6 +14,7 @@ export class CourseDetailComponent implements OnInit {
 
   course: Course | undefined;
   cart?: Cart;
+  progetti: any = [];
 
   constructor(private CartService: CartService, private CourseService: CourseService, private router: ActivatedRoute) { }
 
@@ -21,7 +22,12 @@ export class CourseDetailComponent implements OnInit {
     this.router.params.subscribe(params => {
       const id = params['id'];
       if(id){
-        this.CourseService.getCourseById(id).subscribe(course => this.course = course);
+        this.CourseService.getCourseById(id).subscribe(course => {
+          this.course = course;
+          this.course?.progetti.forEach(element => {
+            this.progetti.push(element)
+          });
+        });
       }
     });
   }

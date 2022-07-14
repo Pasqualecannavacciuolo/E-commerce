@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroComponent implements OnInit {
 
+  logged: string = 'false';
+
   constructor() { }
 
   ngOnInit(): void {
+    if(window.sessionStorage.getItem('logged') === 'true') {
+      this.logged = 'true';
+    }
   }
 
 }
