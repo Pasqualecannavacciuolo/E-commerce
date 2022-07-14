@@ -9,9 +9,58 @@
             </mat-card-header>
             <img class="course-image" mat-card-image src="{{ course?.image }}" alt="Photo of a Shiba Inu" />
             <mat-card-content>
-                <p>
-                    {{ course?.body }}
-                </p>
+                <div class="content-wrapper">
+                    <div class="text-content">
+                        <h2>Introduzione al corso</h2>
+                        <p>
+                            {{ course?.body_introduzione }}
+                        </p>
+                    </div>
+                    <div class="charts-content">
+                        <div #ContainerRef class="line-chart">
+                            <h2>Grafico Github STARS</h2>
+                            <ngx-charts-line-chart
+                                [view]="[ContainerRef.offsetWidth, 600]"
+                                [customColors]="lineChartcustomColors "
+                                [legend]="legend"
+                                [showXAxisLabel]="showXAxisLabel"
+                                [showYAxisLabel]="showYAxisLabel"
+                                [xAxis]="xAxis"
+                                [yAxis]="yAxis"
+                                [xAxisLabel]="xAxisLabel"
+                                [yAxisLabel]="yAxisLabel"
+                                [timeline]="timeline"
+                                [results]="multi"    
+                                >
+                            </ngx-charts-line-chart>
+                        </div>
+                    </div>
+                    <div class="text-content">
+                        <h2>Cosa imparerai</h2>
+                        <p>
+                            {{ course?.body_cosa_imparerai }}
+                        </p>
+                    </div>
+                    <div class="charts-content">
+                        <div class="bar-chart">
+                            <h2>Grafico popolarità</h2>
+                            <ngx-charts-bar-vertical
+                            [view]="[ContainerRef.offsetWidth, 600]"
+                            [customColors]="lineChartcustomColors "
+                            [legend]="legend"
+                            [showXAxisLabel]="showXAxisLabel"
+                            [showYAxisLabel]="showYAxisLabel"
+                            [xAxis]="xAxis"
+                            [yAxis]="yAxis"
+                            [xAxisLabel]="xAxisLabel_popularity"
+                            [yAxisLabel]="yAxisLabel_popularity"
+                            [results]="popularity_data" 
+                            >
+                            </ngx-charts-bar-vertical>
+                        </div>
+                    </div>
+                </div>
+                
             </mat-card-content>
 
             <mat-grid-list cols="2" rowHeight="1:1">

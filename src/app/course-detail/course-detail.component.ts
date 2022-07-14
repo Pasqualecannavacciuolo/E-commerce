@@ -4,6 +4,7 @@ import { Cart } from '../models/Cart';
 import { Course } from '../models/Course';
 import { CartService } from '../services/cart.service';
 import { CourseService } from '../services/course.service';
+import { multi, lineChartcustomColors, popularity_data } from '../charts_data/data';
 
 @Component({
   selector: 'app-course-detail',
@@ -14,9 +15,33 @@ export class CourseDetailComponent implements OnInit {
 
   course: Course | undefined;
   cart?: Cart;
+  // Array che contiene tutti i progetti di un corso
   progetti: any = [];
 
-  constructor(private CartService: CartService, private CourseService: CourseService, private router: ActivatedRoute) { }
+  // Variabili grafico
+  multi!: any[];
+  lineChartcustomColors!: any[];
+  popularity_data!: any[];
+
+  // Opzioni grafico
+  legend: boolean = true;
+  showLabels: boolean = true;
+  animations: boolean = true;
+  xAxis: boolean = true;
+  yAxis: boolean = true;
+  showYAxisLabel: boolean = true;
+  showXAxisLabel: boolean = true;
+  xAxisLabel: string = 'Anno';
+  yAxisLabel: string = 'Stars';
+  xAxisLabel_popularity: string = 'Framework';
+  yAxisLabel_popularity: string = 'Popolarita';
+  timeline: boolean = true;
+
+  constructor(private CartService: CartService, private CourseService: CourseService, private router: ActivatedRoute) { 
+    Object.assign(this, { multi });
+    Object.assign(this, { lineChartcustomColors });
+    Object.assign(this, { popularity_data });
+  }
 
   ngOnInit(): void {
     this.router.params.subscribe(params => {
@@ -24,6 +49,7 @@ export class CourseDetailComponent implements OnInit {
       if(id){
         this.CourseService.getCourseById(id).subscribe(course => {
           this.course = course;
+          // Ottengo tutti i progetti relativi ad un corso
           this.course?.progetti.forEach(element => {
             this.progetti.push(element)
           });
@@ -33,6 +59,7 @@ export class CourseDetailComponent implements OnInit {
   }
 
   addToCart(course: Course) {
+    // Se trovo un carrello con questo ID
     this.CartService.getCart(window.sessionStorage.getItem('id')).subscribe((res) => {
       if(res.hasOwnProperty('id')) {
         this.cart = res;
@@ -41,15 +68,12 @@ export class CourseDetailComponent implements OnInit {
           id: window.sessionStorage.getItem('id'),
           items: courses_array
         }
-        console.log("Prima:  " + cart_obj.items);
         cart_obj.items?.push(course);
-        console.log("Dopo:  " + cart_obj.items);
         this.CartService.addItem(window.sessionStorage.getItem('id'), <Cart>cart_obj).subscribe();
         window.location.reload();
       }
        
       }, (error) => { // Se non trovo alcun carrello con l'ID indicato
-      // Se trovo un carrello con questo ID
       let courses_array = [];
       courses_array.push(course);
       let cart_obj = {
@@ -60,20 +84,5 @@ export class CourseDetailComponent implements OnInit {
       window.location.reload();
     });
   }
-    /*let courses_array = [];
-    courses_array.push(course);
-    let cart_obj = {
-      id: window.sessionStorage.getItem('id'),
-      items: courses_array
-    }
-    this.CartService.saveToCart(<Cart>cart_obj).subscribe((res) => {
-      this.cart = res;
-      if(this.cart?.items.length! > 0) {
-        console.log("Sono maggiore di 0");
-      } else {
-        console.log("Sono vuoto");
-      }
-    });
-  }*/
 
 }

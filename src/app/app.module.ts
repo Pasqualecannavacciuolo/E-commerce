@@ -21,6 +21,8 @@ import { OrderByPipe } from './order-by.pipe';
 import { CourseDetailComponent } from './course-detail/course-detail.component';
 import { CartComponent } from './cart/cart.component';
 import { SumPipe } from './sum.pipe';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+
 
 
 @NgModule({
@@ -47,6 +49,7 @@ import { SumPipe } from './sum.pipe';
     ReactiveFormsModule,
     FormsModule,
     Ng2SearchPipeModule,
+    NgxChartsModule,
   ],
   providers: [OrderByPipe],
   bootstrap: [AppComponent]

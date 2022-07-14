@@ -47,6 +47,21 @@ mat-grid-tile {
   background: var(--text-light-color);
 }
 
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.line-chart, .bar-chart {
+  height: 100%;
+}
+
+.text-content, .charts-content {
+  width: 50%;
+}
+
 .mat-grid-tile-content {
   display: flex !important;
   flex-direction: column !important;
