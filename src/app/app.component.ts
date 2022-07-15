@@ -13,6 +13,7 @@ import { UserService } from './services/user.service';
 })
 export class AppComponent implements OnInit {
   logged = false;
+  admin_token?: any;
   user?: User;
   cart: Cart | undefined;
   cartItems: number | undefined;
@@ -38,6 +39,10 @@ export class AppComponent implements OnInit {
 
       if (sessionLogged == 'true') {
         this.logged = true;
+        // Se è presente l'admin token lo salvo nella variabile
+        if(window.sessionStorage.getItem('admin_token')) {
+          this.admin_token = window.sessionStorage.getItem('admin_token');
+        }
         let sessionID = window.sessionStorage.getItem('id');
         this.CartService.getCart(sessionID).subscribe(c => this.cartItems = c.items.length);
       }
