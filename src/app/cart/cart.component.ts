@@ -61,10 +61,7 @@ export class CartComponent implements OnInit {
             window.sessionStorage.getItem('id'),
             <Cart>cart_obj
           ).subscribe();
-          this.cart?.items.filter(function(value){ 
-            return value !== idToDelete;
-          });
-          //this.cart?.items.pop();
+          this.cart!.items = remainingArr!;
           this.getCartTotal();
         }
       }
