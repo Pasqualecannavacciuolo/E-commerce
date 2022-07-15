@@ -47,7 +47,7 @@ export class AppComponent implements OnInit {
   title = 'E-commerce';
 
   logout() {
-    let sessionStorageArray = ['id', 'logged'];
+    let sessionStorageArray = ['id', 'logged', 'admin_token'];
 
     if (this.user?.username) {
       sessionStorageArray.forEach((element) => {

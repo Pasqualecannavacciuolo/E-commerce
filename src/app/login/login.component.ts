@@ -47,9 +47,11 @@ export class LoginComponent implements OnInit {
 
     //this.UserService.getUserByID(sessionid).subscribe(u => this.user = u);
     let founded_user_id = 0;
+    let user_role = '';
     this.UserService.getAllUsers().subscribe((result) => {
       const user = result.find((element: any) => {
         founded_user_id = element.id;
+        user_role = element.role;
         return (
           element.username === user_form_data.username &&
           element.email === user_form_data.email
@@ -58,6 +60,10 @@ export class LoginComponent implements OnInit {
       if (user) {
         window.sessionStorage.setItem('logged', 'true');
         window.sessionStorage.setItem('id', String(founded_user_id));
+        // Se l'utente che sta loggando ha come ruolo ADMIN scrivo il token
+        if(user_role === 'Admin') {
+          window.sessionStorage.setItem('admin_token', 'b172t6f2tr12r9t119');
+        }
         // Alert personalizzato che avvisa dell'avvenuta registrazione
         Swal.fire({
           position: 'center',

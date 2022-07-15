@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { CourseDetailComponent } from './course-detail/course-detail.component';
 import { CartComponent } from './cart/cart.component';
+import { AdminGuard } from './admin.guard';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
 
 const routes: Routes = [
   { 
@@ -48,6 +50,11 @@ const routes: Routes = [
     path: 'cart', 
     component: CartComponent,
     canActivate: [LoggedUsersGuard] 
+  },
+  { 
+    path: 'dashboard', 
+    component: DashboardComponent,
+    canActivate: [AdminGuard] 
   },
 ];
 

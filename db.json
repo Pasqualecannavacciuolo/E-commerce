@@ -7,7 +7,8 @@
       "data_nascita": "1997-09-23T22:00:00.000Z",
       "username": "Pandorenki",
       "email": "p.cannavacciuolo@icloud.com",
-      "image": "assets/pandorenki_portrait.jpg"
+      "image": "assets/pandorenki_portrait.jpg",
+      "role": "Admin"
     },
     {
       "id": "72704d51-9be7-4a01-94b2-48c68a88fd62",

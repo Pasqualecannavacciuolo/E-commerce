@@ -22,6 +22,7 @@ import { CourseDetailComponent } from './course-detail/course-detail.component';
 import { CartComponent } from './cart/cart.component';
 import { SumPipe } from './sum.pipe';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
 
 
 
@@ -37,7 +38,8 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     OrderByPipe,
     CourseDetailComponent,
     CartComponent,
-    SumPipe
+    SumPipe,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
