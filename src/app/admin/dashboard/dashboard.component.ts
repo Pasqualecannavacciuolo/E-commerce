@@ -18,8 +18,5 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  /*create_admin() {
-    this.router.navigate(['create'], {relativeTo:this.route});
-  }*/
 
 }

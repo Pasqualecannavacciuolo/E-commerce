@@ -12,7 +12,8 @@
 }
 
 .full-content {
-    margin: auto auto;
+    margin: 100px 100px;
+    height: 100vh;
     padding: 50px;
     background-color: var(--background-color);
 }

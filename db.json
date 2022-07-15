@@ -45,6 +45,25 @@
       "username": "Valentina",
       "email": "vendini@gmail.com",
       "image": "assets/fake_avatar.png"
+    },
+    {
+      "id": "3440474d-b3cf-4090-8566-7c72862ab784",
+      "nome": "Alberto",
+      "cognome": "Finzi",
+      "data_nascita": "1979-10-12T23:00:00.000Z",
+      "username": "Alberto",
+      "email": "a.finzi@gmail.com",
+      "image": "assets/fake_avatar.png"
+    },
+    {
+      "id": "1e4db2e4-c219-4667-af80-d6c17fd2a5c1",
+      "nome": "Adriano",
+      "cognome": "Peron",
+      "data_nascita": "1970-07-31T22:00:00.000Z",
+      "username": "Adriano",
+      "email": "a.peron@gmail.com",
+      "image": "assets/fake_avatar.png",
+      "role": "Admin"
     }
   ],
   "courses": [

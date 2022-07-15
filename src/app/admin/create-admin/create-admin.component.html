@@ -1,20 +1,96 @@
-<mat-card class="example-card">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Shiba Inu</mat-card-title>
-      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-    <mat-card-content>
-      <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting.
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
-  </mat-card>
-  
+<div class="container">
+  <div class="container-child" id="form">
+    <mat-stepper
+      [linear]="isLinear"
+      #stepper
+    >
+      <mat-step [stepControl]="datiAnagraficiForm">
+        <form [formGroup]="datiAnagraficiForm" class="dati-anagrafici-form">
+          <ng-template matStepLabel>Dati anagrafici</ng-template>
+          <mat-form-field appearance="outline">
+            <mat-label>Nome</mat-label>
+            <input matInput formControlName="nome" required />
+            <mat-error *ngIf="nome?.errors?.['required']">
+              Il nome non può essere vuoto
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Cognome</mat-label>
+            <input matInput formControlName="cognome" required />
+            <mat-error *ngIf="cognome?.errors?.['required']">
+              Il cognome non può essere vuoto
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Data di nascita</mat-label>
+            <input
+              formControlName="data_nascita"
+              matInput
+              [matDatepicker]="picker"
+            />
+            <mat-hint>Mese/Giorno/Anno</mat-hint>
+            <mat-datepicker-toggle
+              matSuffix
+              [for]="picker"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="data_nascita?.errors?.['required']">
+              La data di nascita non può essere vuota
+            </mat-error>
+          </mat-form-field>
+
+          <div>
+            <button
+              mat-button
+              matStepperNext
+              class="avanti-button"
+              color="primary"
+            >
+              Avanti
+            </button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="registerForm" label="Dati di accesso">
+        <form [formGroup]="registerForm" class="dati-accesso-form">
+          <mat-form-field appearance="outline" class="mat-form-field">
+            <mat-label>Username</mat-label>
+            <input matInput formControlName="username" type="text" />
+            <mat-error *ngIf="username?.errors?.['required']">
+              L'username non può essere vuoto
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" required />
+            <mat-error *ngIf="email?.errors?.['required']">
+              L'email non può essere vuota
+            </mat-error>
+            <mat-error *ngIf="email?.errors?.['email']">
+              L'email non è nel giusto formato
+            </mat-error>
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperPrevious>Indietro</button>
+            <button mat-button matStepperNext color="primary">Avanti</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Fine</ng-template>
+        <p>Hai finito l'inserimento dei dati adesso puoi registrarti.</p>
+        <div>
+          <button
+            [disabled]="registerForm.invalid"
+            (click)="onSubmit()"
+            mat-raised-button
+            color="primary"
+          >
+            Registrati
+          </button>
+          <button mat-button (click)="stepper.reset()">Reset</button>
+        </div>
+      </mat-step>
+    </mat-stepper>
+  </div>
+</div>
