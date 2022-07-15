@@ -1,0 +1,36 @@
+.page {
+    background-image: url("../../../assets/bg-pattern.png");
+    background-size: auto;
+    overflow: auto;
+    width: 100%;
+    height: 100vh;
+}
+
+.title, h1 {
+    text-align: center;
+    font-size: 38px;
+}
+
+.full-content {
+    margin: auto auto;
+    padding: 50px;
+    background-color: var(--background-color);
+}
+
+.wrapper {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    width: 100%;
+    min-width: fit-content;
+}
+
+.action-list {
+    width: 30%;
+}
+
+.action-outlet {
+    width: 60%;
+    background-color: red;
+}

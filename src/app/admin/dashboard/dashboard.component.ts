@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  actions = ['Crea Admin', 'Crea Prodotto', "Modifica prodotto", "Cancella Prodotto"]
 
+  constructor() { }
+  
   ngOnInit(): void {
   }
+
 
 }
