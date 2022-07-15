@@ -1,18 +1,25 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  styleUrls: ['./dashboard.component.css'],
 })
 export class DashboardComponent implements OnInit {
+  actions = [
+    'Crea Admin',
+    'Crea Prodotto',
+    'Modifica prodotto',
+    'Cancella Prodotto',
+  ];
 
-  actions = ['Crea Admin', 'Crea Prodotto', "Modifica prodotto", "Cancella Prodotto"]
+  constructor(private route: ActivatedRoute, private router: Router) {}
 
-  constructor() { }
-  
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
+  /*create_admin() {
+    this.router.navigate(['create'], {relativeTo:this.route});
+  }*/
 
 }

@@ -12,6 +12,7 @@ import { CourseDetailComponent } from './course-detail/course-detail.component';
 import { CartComponent } from './cart/cart.component';
 import { AdminGuard } from './admin.guard';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { CreateAdminComponent } from './admin/create-admin/create-admin.component';
 
 const routes: Routes = [
   { 
@@ -54,8 +55,17 @@ const routes: Routes = [
   { 
     path: 'dashboard', 
     component: DashboardComponent,
-    canActivate: [AdminGuard] 
+    canActivate: [AdminGuard],
+    children: [
+      { 
+        path: 'create', 
+        component: CreateAdminComponent,
+        canActivate: [AdminGuard],
+        outlet: 'admin_outlet' 
+      },
+    ]
   },
+  
 ];
 
 @NgModule({

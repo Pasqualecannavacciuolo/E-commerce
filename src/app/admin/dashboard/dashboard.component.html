@@ -2,24 +2,18 @@
   <div class="full-content">
     <div class="title"><h1>DASHBOARD GENERALE</h1></div>
     <div class="wrapper">
+      <router-outlet></router-outlet>
       <div class="action-list">
         <h2>Azioni</h2>
         <mat-action-list>
-          <button mat-list-item *ngFor="let action of actions">
+          <button mat-list-item *ngFor="let action of actions" [routerLink]="['/dashboard/',{ outlets: { 'admin_outlet': ['create'] } }]">
             {{ action }}
           </button>
         </mat-action-list>
       </div>
       <div class="action-outlet">
-        <router-outlet></router-outlet>
+        <router-outlet name="admin_outlet"></router-outlet>
       </div>
     </div>
   </div>
 </div>
-
-<!--<mat-action-list>
-    <button mat-flat-button color="primary" (click)="resetFilters()" class="reset-button">Reset filtri</button>
-    <div class="tags" *ngFor="let tag of unique_tags">
-        <button mat-list-item (click)="setTag(tag)">{{ tag }}</button>
-    </div>
-  </mat-action-list>-->
