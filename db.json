@@ -470,49 +470,7 @@
   "cart": [
     {
       "id": "72704d51-9be7-4a01-94b2-48c68a88fd62",
-      "items": [
-        {
-          "id": "2",
-          "titolo": "Corso React Base",
-          "body_introduzione": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-          "body_cosa_imparerai": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-          "prezzo": 150,
-          "image": "https://blog.wildix.com/wp-content/uploads/2020/06/react-logo.jpg",
-          "macro_category": "Frontend",
-          "tags": [
-            "React",
-            "Javascript"
-          ],
-          "cosa_imparerai": [
-            "Argomento #1",
-            "Argomento #2",
-            "Argomento #3",
-            "Argomento #4"
-          ],
-          "progetti": [
-            {
-              "nome": "Progetto #1",
-              "difficolta": "easy"
-            },
-            {
-              "nome": "Progetto #2",
-              "difficolta": "easy"
-            },
-            {
-              "nome": "Progetto #3",
-              "difficolta": "easy"
-            },
-            {
-              "nome": "Progetto #4",
-              "difficolta": "medium"
-            },
-            {
-              "nome": "Progetto #5",
-              "difficolta": "difficult"
-            }
-          ]
-        }
-      ]
+      "items": []
     },
     {
       "id": "8ef64c87-2ef8-4f22-8616-0fb9244fa80f",
