@@ -7,12 +7,6 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./dashboard.component.css'],
 })
 export class DashboardComponent implements OnInit {
-  actions = [
-    'Crea Admin',
-    'Crea Prodotto',
-    'Modifica prodotto',
-    'Cancella Prodotto',
-  ];
 
   constructor(private route: ActivatedRoute, private router: Router) {}
 

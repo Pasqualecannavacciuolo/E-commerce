@@ -13,7 +13,7 @@
 
 .full-content {
     margin: 100px 100px;
-    height: 100vh;
+    height: fit-content;
     padding: 50px;
     background-color: var(--background-color);
 }

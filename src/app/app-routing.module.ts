@@ -13,6 +13,7 @@ import { CartComponent } from './cart/cart.component';
 import { AdminGuard } from './admin.guard';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { CreateAdminComponent } from './admin/create-admin/create-admin.component';
+import { CreateCourseComponent } from './admin/create-course/create-course.component';
 
 const routes: Routes = [
   { 
@@ -58,8 +59,14 @@ const routes: Routes = [
     canActivate: [AdminGuard],
     children: [
       { 
-        path: 'create', 
+        path: 'create-admin', 
         component: CreateAdminComponent,
+        canActivate: [AdminGuard],
+        outlet: 'admin_outlet' 
+      },
+      { 
+        path: 'create-course', 
+        component: CreateCourseComponent,
         canActivate: [AdminGuard],
         outlet: 'admin_outlet' 
       },

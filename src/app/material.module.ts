@@ -16,6 +16,8 @@ import {MatTreeModule} from '@angular/material/tree';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatBadgeModule} from '@angular/material/badge';
+import {MatSelectModule} from '@angular/material/select';
+
 
 import { NgModule } from '@angular/core';
 
@@ -39,6 +41,7 @@ import { NgModule } from '@angular/core';
     MatGridListModule,
     MatChipsModule,
     MatBadgeModule,
+    MatSelectModule,
   ],
   exports: [
     CommonModule,
@@ -59,6 +62,7 @@ import { NgModule } from '@angular/core';
     MatGridListModule,
     MatChipsModule,
     MatBadgeModule,
+    MatSelectModule,
   ],
 })
 export class MaterialModule {}

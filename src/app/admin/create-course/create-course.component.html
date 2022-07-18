@@ -1,0 +1,143 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="createCourseForm" class="register-form">
+  <!-- Value: {{ registerForm.value | json }} -->
+
+  <h1 class="mat-headline">Creazione di un nuovo corso</h1>
+
+  <!-- TITOLO FIELD -->
+  <mat-form-field appearance="outline" class="mat-form-field">
+    <mat-label>Titolo</mat-label>
+    <input matInput formControlName="titolo" type="text" />
+    <mat-error *ngIf="titolo?.errors?.['required']">
+      Il titolo non può essere vuoto
+    </mat-error>
+  </mat-form-field>
+
+  <!-- BODY_INTRODUZIONE FIELD -->
+  <mat-form-field appearance="outline">
+    <mat-label>Body introduzione</mat-label>
+    <input matInput formControlName="body_introduzione" type="text" />
+    <mat-error *ngIf="body_introduzione?.errors?.['required']">
+      Non può essere vuoto
+    </mat-error>
+  </mat-form-field>
+
+   <!-- COSA_IMPARERAI FIELD -->
+   <mat-form-field appearance="outline">
+    <mat-label>Body cosa imparerai</mat-label>
+    <input matInput formControlName="body_cosa_imparerai" type="text" />
+    <mat-error *ngIf="body_cosa_imparerai?.errors?.['required']">
+      Non può essere vuoto
+    </mat-error>
+  </mat-form-field>
+
+  <!-- PREZZO FIELD -->
+  <mat-form-field appearance="outline">
+    <mat-label>Prezzo</mat-label>
+    <input matInput formControlName="prezzo" type="text" />
+    <mat-error *ngIf="prezzo?.errors?.['required']">
+      Non può essere vuoto
+    </mat-error>
+  </mat-form-field>
+
+   <!-- IMMAGINE FIELD -->
+   <mat-form-field appearance="outline">
+    <mat-label>Immagine</mat-label>
+    <input matInput formControlName="image" type="text" />
+    <mat-error *ngIf="image?.errors?.['required']">
+      Non può essere vuoto
+    </mat-error>
+  </mat-form-field>
+
+  <!-- MACRO_CATEGORY FIELD -->
+  <mat-form-field appearance="outline">
+    <mat-label>Macro categoria</mat-label>
+    <input matInput formControlName="macro_category" type="text" />
+    <mat-error *ngIf="macro_category?.errors?.['required']">
+      Non può essere vuoto
+    </mat-error>
+  </mat-form-field>
+
+  <!-- TAGS FIELD -->
+    <div class="table-wrapper">
+        <div class="table-heading-wrapper">
+            <mat-label class="table-heading-label"><strong>Aggiungi tag multipli</strong></mat-label>
+            <button type="button" (click)="addTag()" mat-stroked-button color="primary">Aggiungi</button> 
+        </div>
+        <table formArrayName="tags"> 
+            <tr *ngFor="let tag of tags.controls; let i=index" [formGroupName]="i">  
+            <td>
+                <mat-form-field appearance="legacy">
+                    <mat-label>Nome del tag</mat-label>
+                    <input matInput formControlName="name" type="text" />
+                </mat-form-field>  
+            </td>  
+            <td>  
+                <button (click)="removeTag(i)" mat-flat-button color="primary">Remove</button>  
+            </td>  
+            </tr>  
+        </table>  
+    </div>
+
+  <!-- COSA_IMPARERAI FIELD -->
+    <div class="table-wrapper">
+        <div class="table-heading-wrapper">
+            <mat-label class="table-heading-label"><strong>Aggiungi cosa imparerai</strong></mat-label>
+            <button type="button" (click)="addCosaImparerai()" mat-stroked-button color="primary">Aggiungi</button> 
+        </div>
+        <table formArrayName="cosa_imparerai"> 
+            <tr *ngFor="let elemento of cosa_imparerai.controls; let i=index" [formGroupName]="i">  
+                <td>
+                    <mat-form-field appearance="legacy">
+                        <mat-label>Progetto {{i}} </mat-label>
+                        <input matInput formControlName="name" type="text" />
+                    </mat-form-field>  
+                </td>  
+                <td>  
+                    <button (click)="removeCosaImparerai(i)" mat-flat-button color="primary">Remove</button>  
+                </td>  
+                </tr> 
+        </table>  
+    </div>
+
+  <!-- PROGETTI FIELD -->
+    <div class="table-wrapper">
+        <div class="table-heading-wrapper">
+            <mat-label class="table-heading-label"><strong>Aggiungi i progetti da svolgere</strong></mat-label>
+            <button type="button" (click)="addProgetto()" mat-stroked-button color="primary">Aggiungi</button> 
+        </div>
+        <table formArrayName="progetti"> 
+            <tr *ngFor="let progetto of progetti.controls; let i=index" [formGroupName]="i">  
+                <td>
+                    <mat-label>Progetto {{i}} </mat-label>
+                    <mat-form-field appearance="legacy">
+                        <mat-label>Nome progetto</mat-label>
+                        <input matInput formControlName="nome" type="text" />
+                    </mat-form-field>  
+                    <mat-form-field appearance="legacy">
+                        <mat-label>Difficoltà </mat-label>
+                        <mat-select formControlName="difficolta">
+                            <mat-option value="easy">Facile</mat-option>
+                            <mat-option value="medium">Medio</mat-option>
+                            <mat-option value="difficult">Difficile</mat-option>
+                          </mat-select>
+                    </mat-form-field>  
+                </td>  
+                <td>  
+                    <button (click)="removeProgetto(i)" mat-flat-button color="primary">Remove</button>  
+                </td>  
+                </tr>  
+        </table>  
+    </div>
+
+
+    <div class="button-wrapper">
+        <button
+          [disabled]="createCourseForm.invalid"
+          mat-raised-button
+          color="primary"
+        >
+          Crea
+        </button>
+      </div>
+
+</form>

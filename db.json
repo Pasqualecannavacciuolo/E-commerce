@@ -484,6 +484,34 @@
           "difficolta": "medium"
         }
       ]
+    },
+    {
+      "id": "138b34ec-f7be-42bb-bad7-b51893c7b392",
+      "titolo": "Corso Web Marketing",
+      "body_introduzione": "Wafer candy canes cake jelly-o danish cookie soufflé. Cotton candy cheesecake tiramisu powder soufflé I love I love pastry toffee. Pudding sweet roll jelly beans cake lemon drops chocolate bar caramels brownie. Candy I love chocolate bar powder danish fruitcake pastry chocolate cake. Gingerbread jelly shortbread macaroon carrot cake I love. Shortbread I love ice cream dragée donut cotton candy chocolate. I love pastry cookie apple pie dessert pastry. Fruitcake cookie apple pie marzipan cotton candy lollipop marzipan. Marzipan jelly cookie wafer I love candy gummi bears. Lemon drops tootsie roll cake jelly tootsie roll chocolate bar caramels oat cake. Cupcake powder cheesecake liquorice biscuit toffee chocolate bar. Jelly-o cookie tart I love I love apple pie. Chocolate bar ice cream shortbread sugar plum sugar plum donut marzipan. Macaroon cheesecake brownie pie muffin.",
+      "body_cosa_imparerai": "Wafer candy canes cake jelly-o danish cookie soufflé. Cotton candy cheesecake tiramisu powder soufflé I love I love pastry toffee. Pudding sweet roll jelly beans cake lemon drops chocolate bar caramels brownie. Candy I love chocolate bar powder danish fruitcake pastry chocolate cake. Gingerbread jelly shortbread macaroon carrot cake I love. Shortbread I love ice cream dragée donut cotton candy chocolate. I love pastry cookie apple pie dessert pastry. Fruitcake cookie apple pie marzipan cotton candy lollipop marzipan. Marzipan jelly cookie wafer I love candy gummi bears. Lemon drops tootsie roll cake jelly tootsie roll chocolate bar caramels oat cake. Cupcake powder cheesecake liquorice biscuit toffee chocolate bar. Jelly-o cookie tart I love I love apple pie. Chocolate bar ice cream shortbread sugar plum sugar plum donut marzipan. Macaroon cheesecake brownie pie muffin.",
+      "prezzo": "639",
+      "image": "https://storage.gtmasterclub.it/public/production/data/upload/press_png/2021-08-03_122606logo2022ita1.png",
+      "macro_category": "Marketing",
+      "tags": [
+        "web",
+        "marketing",
+        "web marketing"
+      ],
+      "cosa_imparerai": [
+        "Cosa #1",
+        "Cosa importante #2"
+      ],
+      "progetti": [
+        {
+          "nome": "Catalogo digitale negozio abbigliamento",
+          "difficolta": "medium"
+        },
+        {
+          "nome": "Campagna pubblicitaria da 100k",
+          "difficolta": "difficult"
+        }
+      ]
     }
   ],
   "cart": [

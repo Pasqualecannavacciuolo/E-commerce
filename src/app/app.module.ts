@@ -24,6 +24,7 @@ import { SumPipe } from './sum.pipe';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { CreateAdminComponent } from './admin/create-admin/create-admin.component';
+import { CreateCourseComponent } from './admin/create-course/create-course.component';
 
 
 
@@ -41,7 +42,8 @@ import { CreateAdminComponent } from './admin/create-admin/create-admin.componen
     CartComponent,
     SumPipe,
     DashboardComponent,
-    CreateAdminComponent
+    CreateAdminComponent,
+    CreateCourseComponent,
   ],
   imports: [
     BrowserModule,

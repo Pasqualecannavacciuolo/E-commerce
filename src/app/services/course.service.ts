@@ -29,4 +29,9 @@ export class CourseService {
     const url = `http://localhost:3000/courses/${id}`;
     return this.http.get<Course>(url);
   }
+
+  createCourse(course: Course): Observable<any> {
+    const url = 'http://localhost:3000/courses/';
+    return this.http.post(url, course);
+  }
 }

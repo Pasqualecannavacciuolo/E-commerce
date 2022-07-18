@@ -6,8 +6,11 @@
       <div class="action-list">
         <h2>Azioni</h2>
         <mat-action-list>
-          <button mat-list-item *ngFor="let action of actions" [routerLink]="['/dashboard/',{ outlets: { 'admin_outlet': ['create'] } }]">
-            {{ action }}
+          <button mat-list-item [routerLink]="['/dashboard/',{ outlets: { 'admin_outlet': ['create-admin'] } }]">
+            Create Admin
+          </button>
+          <button mat-list-item [routerLink]="['/dashboard/',{ outlets: { 'admin_outlet': ['create-course'] } }]">
+            Create Course
           </button>
         </mat-action-list>
       </div>
