@@ -27,4 +27,5 @@ export class UserService {
     const url = 'http://localhost:3000/users/';
     return this.http.get<User[]>(url);
   }
+
 }

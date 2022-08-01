@@ -512,6 +512,38 @@
           "difficolta": "difficult"
         }
       ]
+    },
+    {
+      "id": "902d9dba-32cb-462e-81b2-b1ea9434b5ef",
+      "titolo": "RedwoodJS",
+      "body_introduzione": "Wafer candy canes cake jelly-o danish cookie soufflé. Cotton candy cheesecake tiramisu powder soufflé I love I love pastry toffee. Pudding sweet roll jelly beans cake lemon drops chocolate bar caramels brownie. Candy I love chocolate bar powder danish fruitcake pastry chocolate cake. Gingerbread jelly shortbread macaroon carrot cake I love. Shortbread I love ice cream dragée donut cotton candy chocolate. I love pastry cookie apple pie dessert pastry. Fruitcake cookie apple pie marzipan cotton candy lollipop marzipan. Marzipan jelly cookie wafer I love candy gummi bears. Lemon drops tootsie roll cake jelly tootsie roll chocolate bar caramels oat cake. Cupcake powder cheesecake liquorice biscuit toffee chocolate bar. Jelly-o cookie tart I love I love apple pie. Chocolate bar ice cream shortbread sugar plum sugar plum donut marzipan. Macaroon cheesecake brownie pie muffin.",
+      "body_cosa_imparerai": "Wafer candy canes cake jelly-o danish cookie soufflé. Cotton candy cheesecake tiramisu powder soufflé I love I love pastry toffee. Pudding sweet roll jelly beans cake lemon drops chocolate bar caramels brownie. Candy I love chocolate bar powder danish fruitcake pastry chocolate cake. Gingerbread jelly shortbread macaroon carrot cake I love. Shortbread I love ice cream dragée donut cotton candy chocolate. I love pastry cookie apple pie dessert pastry. Fruitcake cookie apple pie marzipan cotton candy lollipop marzipan. Marzipan jelly cookie wafer I love candy gummi bears. Lemon drops tootsie roll cake jelly tootsie roll chocolate bar caramels oat cake. Cupcake powder cheesecake liquorice biscuit toffee chocolate bar. Jelly-o cookie tart I love I love apple pie. Chocolate bar ice cream shortbread sugar plum sugar plum donut marzipan. Macaroon cheesecake brownie pie muffin.",
+      "prezzo": "777",
+      "image": "https://raw.githubusercontent.com/redwoodjs/redwoodjs.com/main/publish/images/mark-logo-cover.png",
+      "macro_category": "Full Stack",
+      "tags": [
+        "redwood",
+        "redwoodjs",
+        "fullstack"
+      ],
+      "cosa_imparerai": [
+        "Cosa rw 1",
+        "Cosa rw 1"
+      ],
+      "progetti": [
+        {
+          "nome": "Progetto rw 1 semplice",
+          "difficolta": "easy"
+        },
+        {
+          "nome": "Progetto rw 2 medio",
+          "difficolta": "medium"
+        },
+        {
+          "nome": "Progetto rw 3 difficile",
+          "difficolta": "difficult"
+        }
+      ]
     }
   ],
   "cart": [
