@@ -3,99 +3,66 @@ import { Router } from '@angular/router';
 import { Cart } from '../models/Cart';
 import { User } from '../models/User';
 import { CartService } from '../services/cart.service';
-import { CheckoutService } from '../services/checkout.service';
 import { UserService } from '../services/user.service';
 
 
+interface Transaction {
+  item: string;
+  cost: number;
+}
+
 @Component({
-  selector: 'app-cart',
-  templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.css'],
+  selector: 'app-success',
+  templateUrl: './success.component.html',
+  styleUrls: ['./success.component.css']
 })
-export class CartComponent implements OnInit {
-  
-  cart?: Cart;
-  cartTotal: number = 0;
+export class SuccessComponent implements OnInit {
+
   sessionID!: any;
-  user!: User;
-  currentRoute: string = '';
+  cart?: Cart;
+  user_to_add_transaction?: User;
+
 
   constructor(
-    private CartService: CartService, 
-    private checkout: CheckoutService, 
+    private CartService: CartService,
     private UserService: UserService,
     private router: Router
     ) {}
 
   ngOnInit(): void {
+    // Ottengo l'ID di sessione dell'utente
     this.sessionID = window.sessionStorage.getItem('id');
-    this.UserService.getUserByID(this.sessionID).subscribe((result) => { this.user = result });
+    // Ottengo il carrello dell'utente
     this.CartService.getCart(this.sessionID).subscribe((c) => {
       this.cart = c;
-      this.getCartTotal();
     });
-  }
-
-  // Calcolo il totale del carrello dell'utente
-  getCartTotal() {
-    this.cartTotal = 0;
-      this.cart?.items.forEach(course => {
-        this.cartTotal += course.prezzo;
-      });
-  }
-
-  // Cancello il corso selezionato
-  deleteCourse(idToDelete: any) {
-    this.CartService.getCart(window.sessionStorage.getItem('id')).subscribe(
-      (res) => {
-        if (res.hasOwnProperty('id')) {
-          this.cart = res;
-          let courses_array = this.cart?.items;
-          let cart_obj = {
-            id: window.sessionStorage.getItem('id'),
-            items: courses_array,
-          };
-          let remainingArr = cart_obj.items?.filter(data => data.id != idToDelete);
-          cart_obj.items = remainingArr;
-          this.CartService.deleteFromCart(
-            window.sessionStorage.getItem('id'),
-            <Cart>cart_obj
-          ).subscribe();
-          this.cart!.items = remainingArr!;
-          this.getCartTotal();
-        }
-      }
-    );
-  }
-
-  makePayment() {
     
+    setTimeout(() => {
+      this.addTransaction();
+    }, 500);
+    setTimeout(() => {
+      this.deleteCart();
+      setTimeout(() => {
+        this.router.navigate(['/home']).then(() => {
+          window.location.reload();
+        });
+      }, 3500);
+    }, 2000);
+    
+  }
 
-    fetch("http://localhost:5000/create-checkout-session", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        items: this.cart?.items,
-      }),
-    })
-    .then(res => {
-      if (res.ok) {
-        return res.json();
-      }
-      return res.json().then(json => Promise.reject(json))
-    })
-    .then(({ url }) => {
-      window.location = url;
-      
-        /*this.UserService.getUserByID(this.sessionID).subscribe((res) => {
+  // Funzione che aggiunge la transazione effettuata nella lista delle transazioni dell'utente
+  addTransaction() {
+    let transactions_array: Transaction[] = [];
+
+    this.UserService.getUserByID(this.sessionID).subscribe((res) => {
           if(res.hasOwnProperty('id')) {
             // Res ritorna i dati dell'utente che copia nella variabile user_to_add_transaction
             this.user_to_add_transaction = res;
             
             // Controllo se ci sono state transazioni precedentemente
             if(this.user_to_add_transaction.transactions !== undefined) {
+              console.log("Ci sono state transazioni");
               // Se ci sono state aggiungo alle vecchie transazioni quelle attuali
               this.user_to_add_transaction!.transactions = this.user_to_add_transaction!.transactions;
               let tmp_cart_items = this.cart?.items;
@@ -104,12 +71,12 @@ export class CartComponent implements OnInit {
                   item: '',
                   cost: 0
                 };
-      
                 transaction.item = element.titolo;
                 transaction.cost = element.prezzo;
                 this.user_to_add_transaction!.transactions.push(transaction);
               });
             } else { // Se non c'è stata alcuna transazione precedente
+              console.log("Non ci sono state transazioni");
               // Popolo la sezione delle transazioni con il carrello attuale
               this.user_to_add_transaction!.transactions = this.cart?.items;
               this.user_to_add_transaction!.transactions.forEach((element: any) => {
@@ -130,15 +97,12 @@ export class CartComponent implements OnInit {
             this.UserService.addTransaction(this.sessionID, this.user_to_add_transaction).subscribe();
           }
         });
-        
-    
-        // Cancello l'intero carrello dell'utente
-        this.CartService.deleteCart(window.sessionStorage.getItem('id')).subscribe();*/
-      
-    })
-    .catch(e => {
-      console.error(e.error)
-    })
   }
-  
+
+  // Funzione che elimina il carrello dell'utente che ha appena comprato i corsi
+  deleteCart() {
+    // Cancello l'intero carrello dell'utente
+    this.CartService.deleteCart(window.sessionStorage.getItem('id')).subscribe();
+  }
+
 }

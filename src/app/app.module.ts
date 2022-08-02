@@ -25,6 +25,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { CreateAdminComponent } from './admin/create-admin/create-admin.component';
 import { CreateCourseComponent } from './admin/create-course/create-course.component';
+import { SuccessComponent } from './success/success.component';
 
 
 
@@ -44,6 +45,7 @@ import { CreateCourseComponent } from './admin/create-course/create-course.compo
     DashboardComponent,
     CreateAdminComponent,
     CreateCourseComponent,
+    SuccessComponent,
   ],
   imports: [
     BrowserModule,

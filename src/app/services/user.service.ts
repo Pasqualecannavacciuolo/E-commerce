@@ -17,7 +17,7 @@ export class UserService {
     return this.http.post(url, user);
   }
 
-  getUserByID(id: any): Observable<any> {
+  getUserByID(id: any): Observable<User> {
     const url = `http://localhost:3000/users/${id}`;
     return this.http.get<User>(url);
   }
@@ -28,4 +28,8 @@ export class UserService {
     return this.http.get<User[]>(url);
   }
 
+  addTransaction(id: any, transaction: any): Observable<any> {
+    const url = `http://localhost:3000/users/${id}`;
+    return this.http.put(url, transaction);
+  }
 }

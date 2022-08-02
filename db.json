@@ -17,7 +17,21 @@
       "data_nascita": "2002-02-10T23:00:00.000Z",
       "username": "MariJo02",
       "email": "mj@gmail.com",
-      "image": "assets/mj_portrait.jfif"
+      "image": "assets/mj_portrait.jfif",
+      "transactions": [
+        {
+          "item": "Corso Svelte Base",
+          "cost": 100
+        },
+        {
+          "item": "Corso Angular Base",
+          "cost": 150
+        },
+        {
+          "item": "Corso Next.JS Base",
+          "cost": 250
+        }
+      ]
     },
     {
       "id": "b06817ac-940f-4f71-829a-65dd9ad46fdc",
@@ -26,7 +40,65 @@
       "data_nascita": "1997-07-29T22:00:00.000Z",
       "username": "Massi",
       "email": "massi97@gmail.com",
-      "image": "assets/massi_portrait.jpg"
+      "image": "assets/massi_portrait.jpg",
+      "transactions": [
+        {
+          "item": "Corso Angular Base",
+          "cost": 150
+        },
+        {
+          "item": "Corso Nest.JS Base",
+          "cost": 350
+        },
+        {
+          "item": "Corso Fotografia Digitale",
+          "cost": 311
+        },
+        {
+          "item": "Corso di Digital Marketing Intermedio",
+          "cost": 245
+        },
+        {
+          "item": "Corso Supabase Base",
+          "cost": 90
+        },
+        {
+          "item": "Corso Angular Base",
+          "cost": 150
+        },
+        {
+          "item": "Corso Angular Intermedio",
+          "cost": 535
+        },
+        {
+          "item": "Corso Angular Base",
+          "cost": 150
+        },
+        {
+          "item": "Corso Angular Intermedio",
+          "cost": 535
+        },
+        {
+          "item": "Corso Angular Base",
+          "cost": 150
+        },
+        {
+          "item": "Corso Angular Intermedio",
+          "cost": 535
+        },
+        {
+          "item": "Corso Next.JS Base",
+          "cost": 250
+        },
+        {
+          "item": "Corso React Base",
+          "cost": 150
+        },
+        {
+          "item": "Corso Svelte Base",
+          "cost": 100
+        }
+      ]
     },
     {
       "id": "1b379e91-bbca-4846-a625-1c998e3d1594",
@@ -547,10 +619,6 @@
     }
   ],
   "cart": [
-    {
-      "id": "72704d51-9be7-4a01-94b2-48c68a88fd62",
-      "items": []
-    },
     {
       "id": "8ef64c87-2ef8-4f22-8616-0fb9244fa80f",
       "items": [

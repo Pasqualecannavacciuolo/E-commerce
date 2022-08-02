@@ -33,7 +33,11 @@ export class AppComponent implements OnInit {
     if (window.sessionStorage.getItem('id')) {
       let sessionid = window.sessionStorage.getItem('id');
 
-      this.UserService.getUserByID(sessionid).subscribe((u) => (this.user = u));
+      this.UserService.getUserByID(sessionid).subscribe((u) => {
+        this.user = u;
+        document.getElementById('avatar-sidebar')!.style.backgroundImage = `url(${this.user.image})`;
+      });
+
 
       let sessionLogged = window.sessionStorage.getItem('logged');
 

@@ -65,7 +65,7 @@
         <mat-card *ngIf="logged" mat-list-item class="example-card">
           <a (click)="sidenav.toggle()" routerLink="/home">
             <mat-card-header>
-              <div mat-card-avatar class="profile-image"></div>
+              <div mat-card-avatar class="profile-image" id="avatar-sidebar"></div>
               <mat-card-title class="profile-name">
                 {{ user?.username }}
               </mat-card-title>
