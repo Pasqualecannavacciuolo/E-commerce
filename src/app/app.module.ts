@@ -26,6 +26,7 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { CreateAdminComponent } from './admin/create-admin/create-admin.component';
 import { CreateCourseComponent } from './admin/create-course/create-course.component';
 import { SuccessComponent } from './success/success.component';
+import { HomeDashboardComponent } from './admin/home-dashboard/home-dashboard.component';
 
 
 
@@ -46,6 +47,7 @@ import { SuccessComponent } from './success/success.component';
     CreateAdminComponent,
     CreateCourseComponent,
     SuccessComponent,
+    HomeDashboardComponent,
   ],
   imports: [
     BrowserModule,

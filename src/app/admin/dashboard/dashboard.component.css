@@ -1,37 +1,43 @@
 .page {
-    background-image: url("../../../assets/bg-pattern.png");
-    background-size: auto;
-    overflow: auto;
-    width: 100%;
-    height: 100vh;
+  background-image: url("../../../assets/bg-pattern.png");
+  background-size: auto;
+  overflow: auto;
+  width: 100%;
+  height: 100vh;
 }
 
-.title, h1 {
-    text-align: center;
-    font-size: 38px;
+.title,
+h1 {
+  /*text-align: center;*/
+  padding: 15px 0;
+  font-size: 38px;
+}
+
+.title a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .full-content {
-    margin: 100px 100px;
-    height: fit-content;
-    padding: 50px;
-    background-color: var(--background-color);
+  margin: 100px 100px;
+  height: fit-content;
+  padding: 50px;
+  background-color: var(--background-color);
 }
 
 .wrapper {
-    margin-top: 50px;
-    display: flex;
-    flex-direction: row;
-    gap: 25px;
-    width: 100%;
-    min-width: fit-content;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  width: 100%;
+  min-width: fit-content;
 }
 
 .action-list {
-    width: 30%;
+  width: 30%;
 }
 
 .action-outlet {
-    width: 60%;
-    
+  width: 60%;
 }
