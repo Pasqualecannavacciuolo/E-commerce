@@ -89,52 +89,6 @@ export class CartComponent implements OnInit {
     .then(({ url }) => {
       window.location = url;
       
-        /*this.UserService.getUserByID(this.sessionID).subscribe((res) => {
-          if(res.hasOwnProperty('id')) {
-            // Res ritorna i dati dell'utente che copia nella variabile user_to_add_transaction
-            this.user_to_add_transaction = res;
-            
-            // Controllo se ci sono state transazioni precedentemente
-            if(this.user_to_add_transaction.transactions !== undefined) {
-              // Se ci sono state aggiungo alle vecchie transazioni quelle attuali
-              this.user_to_add_transaction!.transactions = this.user_to_add_transaction!.transactions;
-              let tmp_cart_items = this.cart?.items;
-              tmp_cart_items!.forEach((element: any) => {
-                let transaction: Transaction = {
-                  item: '',
-                  cost: 0
-                };
-      
-                transaction.item = element.titolo;
-                transaction.cost = element.prezzo;
-                this.user_to_add_transaction!.transactions.push(transaction);
-              });
-            } else { // Se non c'è stata alcuna transazione precedente
-              // Popolo la sezione delle transazioni con il carrello attuale
-              this.user_to_add_transaction!.transactions = this.cart?.items;
-              this.user_to_add_transaction!.transactions.forEach((element: any) => {
-              
-                let transaction: Transaction = {
-                  item: '',
-                  cost: 0
-                };
-      
-                transaction.item = element.titolo;
-                transaction.cost = element.prezzo;
-                transactions_array.push(transaction);
-              });
-              this.user_to_add_transaction.transactions = transactions_array;
-            }
-            
-            // Aggiungo la transazione
-            this.UserService.addTransaction(this.sessionID, this.user_to_add_transaction).subscribe();
-          }
-        });
-        
-    
-        // Cancello l'intero carrello dell'utente
-        this.CartService.deleteCart(window.sessionStorage.getItem('id')).subscribe();*/
-      
     })
     .catch(e => {
       console.error(e.error)

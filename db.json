@@ -30,6 +30,14 @@
         {
           "item": "Corso Next.JS Base",
           "cost": 250
+        },
+        {
+          "item": "Corso Supabase Base",
+          "cost": 90
+        },
+        {
+          "item": "Corso di Digital Marketing Base",
+          "cost": 99
         }
       ]
     },
@@ -664,6 +672,10 @@
           ]
         }
       ]
+    },
+    {
+      "id": "72704d51-9be7-4a01-94b2-48c68a88fd62",
+      "items": []
     }
   ]
 }

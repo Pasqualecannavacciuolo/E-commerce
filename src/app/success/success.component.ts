@@ -64,7 +64,7 @@ export class SuccessComponent implements OnInit {
             if(this.user_to_add_transaction.transactions !== undefined) {
               console.log("Ci sono state transazioni");
               // Se ci sono state aggiungo alle vecchie transazioni quelle attuali
-              this.user_to_add_transaction!.transactions = this.user_to_add_transaction!.transactions;
+              //this.user_to_add_transaction!.transactions = this.user_to_add_transaction!.transactions;
               let tmp_cart_items = this.cart?.items;
               tmp_cart_items!.forEach((element: any) => {
                 let transaction: Transaction = {

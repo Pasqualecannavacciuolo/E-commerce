@@ -29,7 +29,7 @@ app.post("/create-checkout-session", async (req, res) => {
           quantity: 1,
         }
       }),
-      success_url: `${process.env.CLIENT_URL}/home`,
+      success_url: `${process.env.CLIENT_URL}/success`,
       cancel_url: `${process.env.CLIENT_URL}/profile`,
     })
     res.json({ url: session.url })
