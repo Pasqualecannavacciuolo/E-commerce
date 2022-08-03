@@ -46,7 +46,8 @@ const routes: Routes = [
   },
   {
     path: 'success',
-    component: SuccessComponent
+    component: SuccessComponent,
+    canActivate: [LoggedUsersGuard] 
   },
   { 
     path: 'profile', 
