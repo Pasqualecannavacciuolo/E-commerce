@@ -17,6 +17,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatSelectModule} from '@angular/material/select';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 import { NgModule } from '@angular/core';
@@ -42,6 +43,7 @@ import { NgModule } from '@angular/core';
     MatChipsModule,
     MatBadgeModule,
     MatSelectModule,
+    MatPaginatorModule,
   ],
   exports: [
     CommonModule,
@@ -63,6 +65,7 @@ import { NgModule } from '@angular/core';
     MatChipsModule,
     MatBadgeModule,
     MatSelectModule,
+    MatPaginatorModule,
   ],
 })
 export class MaterialModule {}
