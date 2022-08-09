@@ -86,3 +86,10 @@ export var lineChartcustomColors = [
   { name: 'React.js', value: '#0082EF' },
   { name: 'Vue.js', value: '#17D144' },
 ];
+
+export var cardsChartColorScheme = [
+  {name: 'Numero admin', value: '#17B8D1'},
+  {name: 'Numero utenti', value: '#17D16E'},
+  {name: 'Totale acquisti', value: '#E5D21A'},
+  {name: 'Fatturato totale', value: '#E5201A'}
+]

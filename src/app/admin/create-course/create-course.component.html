@@ -33,7 +33,7 @@
   <!-- PREZZO FIELD -->
   <mat-form-field appearance="outline">
     <mat-label>Prezzo</mat-label>
-    <input matInput formControlName="prezzo" type="text" />
+    <input matInput formControlName="prezzo" type="number" />
     <mat-error *ngIf="prezzo?.errors?.['required']">
       Non può essere vuoto
     </mat-error>
@@ -88,7 +88,7 @@
             <tr *ngFor="let elemento of cosa_imparerai.controls; let i=index" [formGroupName]="i">  
                 <td>
                     <mat-form-field appearance="legacy">
-                        <mat-label>Progetto {{i}} </mat-label>
+                        <mat-label>Cosa imparerai {{i}} </mat-label>
                         <input matInput formControlName="name" type="text" />
                     </mat-form-field>  
                 </td>  

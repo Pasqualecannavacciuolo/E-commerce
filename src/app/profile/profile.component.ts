@@ -20,7 +20,7 @@ export class ProfileComponent implements OnInit {
   data_nascita!: string | null;
   username!: string | null;
   email!: string | null;
-
+  sessionid: any = ''
   // Nomi colonne della tabella degli acquisti
   displayedColumns: string[] = ['item', 'cost'];
   transactions: Transaction[] = [];
@@ -33,9 +33,9 @@ export class ProfileComponent implements OnInit {
     /**
      * Ottengo l'id dal session storage
      */
-    let sessionid = window.sessionStorage.getItem('id');
+     this.sessionid = window.sessionStorage.getItem('id');
 
-    this.user = this.UserService.getUserByID(sessionid).subscribe((result) => {
+    this.user = this.UserService.getUserByID(this.sessionid).subscribe((result) => {
       this.user = result;
       document.getElementById('avatar')!.style.backgroundImage = `url(${this.user!.image})`;
       
@@ -54,4 +54,31 @@ export class ProfileComponent implements OnInit {
   getTotalCost() {
     return this.transactions.map(t => t.cost).reduce((acc, value) => acc + value, 0);
   }
+
+  makeSubscription() {
+    fetch("http://localhost:5000/create-checkout-session-for-subscription", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        lookup_keys: "prod_MDhQy6epWi8ZAW",
+        sessionid: this.sessionid,
+      }),
+    })
+    .then(res => {
+      if (res.ok) {
+        return res.json();
+      }
+      return res.json().then(json => Promise.reject(json))
+    })
+    .then(({ url }) => {
+      window.location = url;
+      
+    })
+    .catch(e => {
+      console.error(e.error)
+    })
+  }
+
 }

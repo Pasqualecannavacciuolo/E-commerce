@@ -7,5 +7,6 @@ export interface User {
     email: string,
     image: string,
     role?: string,
-    transactions?: any
+    transactions?: any,
+    subscription?: string
 }

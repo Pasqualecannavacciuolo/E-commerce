@@ -18,6 +18,9 @@ export class CourseDetailComponent implements OnInit {
   // Array che contiene tutti i progetti di un corso
   progetti: any = [];
 
+  // Variabile che conterrà l'ID dell'admin se è presente
+  adminID?: any = null;
+
   // Variabili grafico
   multi!: any[];
   lineChartcustomColors!: any[];
@@ -56,6 +59,7 @@ export class CourseDetailComponent implements OnInit {
         });
       }
     });
+    this.adminID = window.sessionStorage.getItem('admin_token')
   }
 
   addToCart(course: Course) {

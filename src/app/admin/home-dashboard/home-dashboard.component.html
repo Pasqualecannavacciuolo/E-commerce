@@ -21,6 +21,15 @@
                  aria-label="Seleziona ">
   </mat-paginator>
 
-  
+</div>
 
+
+<div #ContainerRef>
+  <h3>Statistiche generali</h3>
+  <ngx-charts-number-card
+  [view]="[ContainerRef.offsetWidth, 250]"
+  [customColors]="cardsChartColorScheme"
+  [results]="single"
+  [cardColor]="cardColor">
+</ngx-charts-number-card>
 </div>

@@ -124,7 +124,7 @@ export class CreateCourseComponent implements OnInit {
       titolo: this.titolo!.value,
       body_introduzione: this.body_introduzione!.value,
       body_cosa_imparerai: this.body_cosa_imparerai!.value,
-      prezzo: this.prezzo!.value,
+      prezzo: <number>this.prezzo!.value,
       image: this.image!.value,
       macro_category: this.macro_category!.value,
       tags: this.convertToArray(this.tags),

@@ -16,6 +16,7 @@ import { CreateAdminComponent } from './admin/create-admin/create-admin.componen
 import { CreateCourseComponent } from './admin/create-course/create-course.component';
 import { SuccessComponent } from './success/success.component';
 import { HomeDashboardComponent } from './admin/home-dashboard/home-dashboard.component';
+import { SuccessSubscriptionComponent } from './success-subscription/success-subscription.component';
 
 const routes: Routes = [
   { 
@@ -48,6 +49,11 @@ const routes: Routes = [
   {
     path: 'success',
     component: SuccessComponent,
+    canActivate: [LoggedUsersGuard] 
+  },
+  {
+    path: 'success-subscription',
+    component: SuccessSubscriptionComponent,
     canActivate: [LoggedUsersGuard] 
   },
   { 
