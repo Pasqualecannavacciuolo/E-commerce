@@ -32,4 +32,9 @@ export class UserService {
     const url = `http://localhost:3000/users/${id}`;
     return this.http.put(url, transaction);
   }
+
+  addSubscription(id: any, user: User): Observable<User> {
+    const url = `http://localhost:3000/users/${id}`;
+    return this.http.put<User>(url, user);
+  }
 }

@@ -53,7 +53,8 @@
           "item": "Corso Angular Intermedio",
           "cost": 535
         }
-      ]
+      ],
+      "subscription": true
     },
     {
       "id": "b06817ac-940f-4f71-829a-65dd9ad46fdc",

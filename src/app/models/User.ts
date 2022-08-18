@@ -8,5 +8,5 @@ export interface User {
     image: string,
     role?: string,
     transactions?: any,
-    subscription?: string
+    subscription?: boolean
 }
