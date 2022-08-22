@@ -121,7 +121,8 @@
           "item": "Corso Svelte Base",
           "cost": 100
         }
-      ]
+      ],
+      "subscription": true
     },
     {
       "id": "1b379e91-bbca-4846-a625-1c998e3d1594",

@@ -20,6 +20,8 @@ export class ProfileComponent implements OnInit {
   data_nascita!: string | null;
   username!: string | null;
   email!: string | null;
+  subscription?: boolean | null;
+
   sessionid: any = ''
   // Nomi colonne della tabella degli acquisti
   displayedColumns: string[] = ['item', 'cost'];
@@ -44,6 +46,8 @@ export class ProfileComponent implements OnInit {
       this.data_nascita = this.user!.data_nascita;
       this.username = this.user!.username;
       this.email = this.user!.email;
+      this.subscription = this.user.subscription;
+      
       this.user!.transactions.forEach((element: Transaction) => {
         tmp_array.push(element);
       });

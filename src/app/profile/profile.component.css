@@ -22,9 +22,20 @@
   border-radius: 0;
 }
 
+span {
+  background-color:  #3D56B2;
+  color: #fafafa;
+  border-radius: 5px;
+  padding: 5px;
+}
+
 
 .example-header-image {
   background-size: cover;
+}
+
+.mat-card-header {
+  margin-top: 15px;
 }
 
 .mat-card-header .mat-card-title {

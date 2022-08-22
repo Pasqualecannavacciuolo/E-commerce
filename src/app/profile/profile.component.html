@@ -2,6 +2,7 @@
   <div class="container">
     <!-- Informazioni di profilo -->
     <mat-card class="example-card">
+      <span *ngIf="subscription != null">Iscritto</span>
       <mat-card-header>
         <div mat-card-avatar class="example-header-image" id="avatar"></div>
         <mat-card-title>{{ username }}</mat-card-title>
@@ -18,7 +19,7 @@
         <mat-label>Email</mat-label>
         <h1>{{ email }}</h1>
       </mat-card-content>
-      <button mat-raised-button color="primary" (click)="makeSubscription()">Sottoscrivi abbonamento</button>
+      <button mat-raised-button color="primary" (click)="makeSubscription()" *ngIf="subscription == null">Sottoscrivi abbonamento</button>
     </mat-card>
   </div>
   <div class="container">
